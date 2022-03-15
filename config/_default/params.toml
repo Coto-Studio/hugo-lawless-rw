@@ -1,0 +1,11 @@
+images = ["images/lawless-logo.png"]
+description = "Restoration & Waterproofing"
+keywords = "Construction, waterproofing"
+
+[[themeColor]]
+  schema = "light"
+  content = "#ffffff"
+  #customMedia = ""
+[[themeColor]]
+  schema = "dark"
+  content = "#000000"
