@@ -1,0 +1,4 @@
+{{ $reset := resources.Get "css/reset.css" }}
+{{ $style := resources.Get "scss/style.sass" | toCSS (dict "targetPath" "assets/css/style.css" "enableSourceMap" true "transpiler" "dartsass") }}
+<link rel="stylesheet" href="{{ $reset.RelPermalink}}" />
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
