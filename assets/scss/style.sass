@@ -3,7 +3,6 @@
 @mixin nothing
 
 @mixin nav-selector
-  --span-height: 6px
   display: block
   background: var(--text-color)
   height: var(--span-height)
@@ -16,17 +15,29 @@
   @include nothing
   content: ''
 
+@mixin trim-font
+  &::before
+    content: ""
+    margin-bottom: -0.0745em
+    display: table
+  &::after
+    content: ""
+    margin-top: -0.2765em
+    display: table
+
 :root
   --border-red:  red solid 2px
-  --rich-black: #010203
   --battleship-gray: #848482
+  --rich-black: #010203
   --pure-white: #FFFFFF
   
-  --background: var(--battleship-gray)
   --text-color: var(--rich-black)
+  --background: var(--pure-white)
+  --background-alt: var(--battleship-gray)
   
   --mobile-margin: 0.8rem
   --break-point: 50em
+  --span-height: 6px
   --grid-gap: 1em
   
 
@@ -38,10 +49,17 @@
   color: var(--text-color)
 
 body
+  background-color: var(--background)
   display: grid
-  gap: var(--grid-gap)
-  grid-template-rows: auto 1fr 1fr auto
+  grid-template-rows: auto 1fr auto
   min-height: 100vh
+h2
+  text-transform: uppercase
+
+p
+ font-family: Helvetica, sans-serif 
+ font-weight: normal
+
 
 .header 
   background: var(--background)
@@ -53,34 +71,33 @@ body
   width: 100%
   padding: var(--mobile-margin)
   z-index: 999
+  filter: drop-shadow(0px 5px 5px var(--battleship-gray))
+  // max-height: 3em
 
   & > *
     flex-shrink: 1
 
-.logo
-  max-width: 5rem
+  img
+    max-height: 3em
+
 
 .company-name
     font-size: 2rem
     font-weight: 900
     line-height: 1
     text-transform: uppercase
-    &::before
-      content: ""
-      margin-bottom: -0.0745em
-      display: table
-    &::after
-      content: ""
-      margin-top: -0.2765em
-      display: table
-    
+    @include trim-font
+    @include nothing
+
+.logo-normal
+  display: none
 
 nav
+  background: var(--background)
   position: absolute
   text-align: right
   top: 100%
   right: 0
-  background: var(--background)
   width: 100%
   transform: scale(1,0)
   transform-origin: top
@@ -100,6 +117,7 @@ nav
     text-transform: uppercase
     opacity: 0
     transition: opacity 150ms ease-in-out
+    color: var(--text-color)
     &:hover
       color: var(--accent)
   
@@ -118,24 +136,90 @@ nav
     
     span
       @include nav-selector
+      @include nothing
       &::before
         @include span-selector
+        @include nothing
         bottom: calc(var(--span-height)*2)
         
       &::after
         @include span-selector
+        @include nothing
         top: calc(var(--span-height))
         
+
+/* MAIN CONTENT */
+
+section
+  padding-block: 1em 
+
+#hero
+  background-color: var(--background-alt)
+
+.hero_content
+  background-image: url('/images/cameron-venti-_MjAjDQQgrY-unsplash.jpg')
+  background-repeat: no-repeat
+  background-size: cover  
+  background-color: rgba(0,0,0,.3)
+  background-blend-mode: multiply
+  background-position: center center 
+  
+  min-height: 250px
+  color: var(--pure-white)
+  text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: var(--grid-gap)
+  h1
+    filter: drop-shadow(2px 2px 5px black)
+
+.btn
+  background: var(--background)
+  color: var(--text-color)
+  padding: 12px 26px
+  text-decoration: none
+  max-width: 175px
+  margin-inline: auto
+  border-radius: 7px
+  @include trim-font
+  @include nothing
+
 .about-us
-  min-height: 100vh
+  background-color: var(--pure-white)
+  // min-height: 100vh
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  align-content: center
+  gap: var(--grid-gap)
+  max-width: 60em
+  margin-inline: auto
+  padding-inline: 3em
+  h2
+    flex: 1 1 100%
+    text-align: center
+  p
+    flex: 1 1 20ch
+
 
 @media screen and (min-width: 800px)
   .nav-toggle-label
     display: none
 
+  .company-name
+    display: none
+  .logo-mobile
+    display: none
+  .logo-normal
+    display: block
   .header
-    display: grid
-    grid-template-columns: 1fr auto 1fr
+    // display: grid
+    // grid-template-columns: 1fr auto 1fr
+    p
+      margin-inline: auto
+
   
   nav
     all: unset
