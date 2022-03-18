@@ -7,7 +7,8 @@
   --background: var(--battleship-gray);
   --text-color: var(--rich-black);
   --mobile-margin: 0.8rem;
-  --break-point: 800px;
+  --break-point: 50em;
+  --grid-gap: 1em;
 }
 
 :is(body, input, select, textarea) {
@@ -20,7 +21,7 @@
 
 body {
   display: grid;
-  gap: 1rem;
+  gap: var(--grid-gap);
   grid-template-rows: auto 1fr 1fr auto;
   min-height: 100vh;
 }
@@ -28,9 +29,10 @@ body {
 .header {
   background: var(--background);
   display: flex;
-  gap: 1rem;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
   width: 100%;
   padding: var(--mobile-margin);
   z-index: 999;
@@ -61,12 +63,13 @@ body {
 }
 
 nav {
+  position: absolute;
   text-align: right;
-  top: 100%;
+  top: 0;
   right: 0;
   background: var(--background);
   width: 100%;
-  transform: scale(1, 1);
+  transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
 }
@@ -133,6 +136,10 @@ nav a:hover {
   position: relative;
   content: "";
   top: calc(var(--span-height));
+}
+
+.about-us {
+  min-height: 100vh;
 }
 
 @media screen and (min-width: 800px) {
