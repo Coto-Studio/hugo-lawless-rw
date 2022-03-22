@@ -1,29 +1,5 @@
+@use 'mixins'
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap")
-
-@mixin nothing
-
-@mixin nav-selector
-  display: block
-  background: var(--text-color)
-  height: var(--span-height)
-  width: 2em
-  border-radius: 2px
-  position: relative
-
-@mixin span-selector
-  @include nav-selector
-  @include nothing
-  content: ''
-
-@mixin trim-font
-  &::before
-    content: ""
-    margin-bottom: -0.0745em
-    display: table
-  &::after
-    content: ""
-    margin-top: -0.2765em
-    display: table
 
 :root
   --border-red:  red solid 2px
@@ -63,6 +39,8 @@ p
  font-weight: normal
 
 
+/* HEADER CONTENT */
+
 .header 
   background: var(--background)
   display: flex
@@ -82,14 +60,13 @@ p
   img
     max-height: 3em
 
-
 .company-name
     font-size: 2rem
     font-weight: 900
     line-height: 1
     text-transform: uppercase
-    @include trim-font
-    @include nothing
+    @include mixins.trim-font
+    @include mixins.nothing
 
 .logo-normal
   display: none
@@ -137,35 +114,26 @@ nav
     right: 0
     
     span
-      @include nav-selector
-      @include nothing
+      @include mixins.nav-selector
+      @include mixins.nothing
       &::before
-        @include span-selector
-        @include nothing
+        @include mixins.span-selector
+        @include mixins.nothing
         bottom: calc(var(--span-height)*2)
         
       &::after
-        @include span-selector
-        @include nothing
+        @include mixins.span-selector
+        @include mixins.nothing
         top: calc(var(--span-height))
         
 
 /* MAIN CONTENT */
 
-section
-  padding-block: 1em 
-
-#hero
-  background-color: var(--background-alt)
-
-.hero_content
-  background-image: url('/images/cameron-venti-_MjAjDQQgrY-unsplash.jpg')
+// Components
+.banner
   background-repeat: no-repeat
   background-size: cover  
-  background-color: rgba(0,0,0,.3)
-  background-blend-mode: multiply
   background-position: center center 
-  
   min-height: 250px
   color: var(--pure-white)
   text-align: center
@@ -173,7 +141,8 @@ section
   flex-direction: column
   justify-content: center
   gap: var(--grid-gap)
-  h1
+  // padding-inline: 2em
+  h1, h2
     filter: drop-shadow(2px 2px 5px black)
 
 .btn
@@ -184,9 +153,22 @@ section
   max-width: 175px
   margin-inline: auto
   border-radius: 7px
-  @include trim-font
-  @include nothing
+  @include mixins.trim-font
+  @include mixins.nothing
 
+// Sections
+section
+  padding-block: 1em
+
+#hero
+  background-color: var(--background-alt)
+  
+
+.hero_content
+  background-image: url('/images/cameron-venti-_MjAjDQQgrY-unsplash.jpg')
+  background-color: rgba(0,0,0,.3)
+  background-blend-mode: multiply
+  
 .about-us
   background-color: var(--pure-white)
   // min-height: 100vh
@@ -241,11 +223,13 @@ section
     span
       margin-block: auto
   
-#banner
-  background: var(--background-alt)
+#banner2
   .hero_content
     background-image: url('/images/omar-prestwich-MiJXjRxkueI-unsplash.jpg')
-  
+
+
+/* MEDIA */
+ 
 @media screen and (min-width: 800px)
   .nav-toggle-label
     display: none

@@ -38,6 +38,7 @@ p {
   font-weight: normal;
 }
 
+/* HEADER CONTENT */
 .header {
   background: var(--background);
   display: flex;
@@ -153,20 +154,9 @@ nav a:hover {
 }
 
 /* MAIN CONTENT */
-section {
-  padding-block: 1em;
-}
-
-#hero {
-  background-color: var(--background-alt);
-}
-
-.hero_content {
-  background-image: url("/images/cameron-venti-_MjAjDQQgrY-unsplash.jpg");
+.banner {
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.3);
-  background-blend-mode: multiply;
   background-position: center center;
   min-height: 250px;
   color: var(--pure-white);
@@ -176,7 +166,7 @@ section {
   justify-content: center;
   gap: var(--grid-gap);
 }
-.hero_content h1 {
+.banner h1, .banner h2 {
   filter: drop-shadow(2px 2px 5px black);
 }
 
@@ -198,6 +188,20 @@ section {
   content: "";
   margin-top: -0.2765em;
   display: table;
+}
+
+section {
+  padding-block: 1em;
+}
+
+#hero {
+  background-color: var(--background-alt);
+}
+
+.hero_content {
+  background-image: url("/images/cameron-venti-_MjAjDQQgrY-unsplash.jpg");
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
 }
 
 .about-us {
@@ -259,13 +263,11 @@ section {
   margin-block: auto;
 }
 
-#banner {
-  background: var(--background-alt);
-}
-#banner .hero_content {
+#banner2 .hero_content {
   background-image: url("/images/omar-prestwich-MiJXjRxkueI-unsplash.jpg");
 }
 
+/* MEDIA */
 @media screen and (min-width: 800px) {
   .nav-toggle-label {
     display: none;
