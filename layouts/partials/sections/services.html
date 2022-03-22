@@ -1,0 +1,9 @@
+<!-- Section: Services -->
+<section id="services" class="bg-neutral-400 text-neutral-100">
+  <div class="services">
+    <h2 class="headline text-uppercase">Services</h2>
+    {{ range where site.RegularPages "Type" "services" }}
+      {{ partial "sections/service" . }}
+    {{ end }}
+  </div>
+</section>
