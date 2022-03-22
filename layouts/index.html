@@ -8,11 +8,13 @@
     <header class="header">
       <div id="logo-container">
         <a href="/">
-          <img class="logo-mobile" src="images/lawless-logo.png" alt="Lawless R+W Logo" />
-          <img class="logo-normal" src="images/lawless-logo-combo.png" alt="Lawless R+W Logo" >
+          {{ $logoMobile := resources.Get "images/lawless-logo.png" }}
+          <img class="logo-mobile" src="{{ $logoMobile.RelPermalink}}" alt="Lawless R+W Logo" height="70px" />
+          {{ $logoFull := resources.Get "images/lawless-logo-combo.png" }}
+          <img class="logo-primary" src="{{ $logoFull.RelPermalink}}" alt="Lawless R+W Logo" height="70px" />
         </a>
       </div>
-      <div class="company-name">Lawless</div>
+      <div class="mobile-name uppercase headline">Lawless</div>
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <nav class="navbar">
         <ul>
@@ -28,7 +30,7 @@
     <main>
       <section id="hero">
         <div class="banner hero_content">
-          <h1>Waterproofing & Restoration</h1>
+          <h1><span class="uppercase company-name headline">Lawless</span> Waterproofing & Restoration</h1>
           <a href="#contact-us" class="btn">Contact Us</a>
         </div>
       </section>
@@ -43,38 +45,10 @@
       <section id="services">
         <div class="services">
           <h2>Services</h2>
-          <div class="service">
-            <a href="#">
-              <div class="service_image" >
-                <img src="images/waterproofing.jpg" alt="Waterproofing and Traffic Coating">
-                <span>Waterproofing and Traffic Coating</span>
-              </div>
-            </a>
-          </div>
-          <div class="service">
-            <a href="#">
-              <div class="service_image" >
-                <img src="images/Garage-Thumbnail-2048x1365.jpg" alt="Concrete Preparation">
-                <span>Concrete Preparation</span>
-              </div>
-            </a>
-          </div>
-          <div class="service">
-            <a href="#">
-              <div class="service_image" >
-                <img src="images/Coating1.jpg" alt="Historical Restoration and Facade Cleaning">
-                <span>Historical Restoration and Facade Cleaning</span>
-              </div>
-            </a>
-          </div>
-          <div class="service">
-            <a href="#">
-              <div class="service_image" >
-                <img src="images/Caulking-Thumbnail-1-2048x1365.jpg" alt="Caulking and Sealants">
-                <span>Caulking and Sealants</span>
-              </div>
-            </a>
-          </div>
+          
+          {{ range where site.RegularPages "Type" "services" }}
+            {{ partial "sections/service" . }}
+          {{ end }}
         </div>
       </section>
       <section id="banner2">
