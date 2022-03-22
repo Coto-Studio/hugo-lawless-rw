@@ -45,7 +45,6 @@
       <section id="services">
         <div class="services">
           <h2>Services</h2>
-          
           {{ range where site.RegularPages "Type" "services" }}
             {{ partial "sections/service" . }}
           {{ end }}
