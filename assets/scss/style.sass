@@ -49,6 +49,10 @@ p
     background-color: var(--clr-neutral-400)
   &neutral-800
     background-color: var(--clr-neutral-800)
+  &image
+    background-image: var(--bg-image)
+    background-color: rgba(0,0,0,.3)
+    background-blend-mode: multiply
   
 
 .headline
@@ -90,6 +94,14 @@ p
 
 
 
+/* Exceptions */
+
+#hero
+  --bg-image: url('/images/cameron-venti-_MjAjDQQgrY-unsplash.jpg') 
+
+#banner2
+  --bg-image: url('/images/omar-prestwich-MiJXjRxkueI-unsplash.jpg') 
+
 
 
 
@@ -115,9 +127,8 @@ p
   @include libs.nothing
 
 .logo
-  --svg-clr: var(--clr-neutral-800)
   width: auto
-  height: 3em
+  height: var(--svg-height)
   fill: var( --svg-clr)
   stroke: var( --svg-clr)
   #name
@@ -213,10 +224,8 @@ nav
 section
   padding-block: 1em
 
-.hero_content
-  background-image: url('/images/cameron-venti-_MjAjDQQgrY-unsplash.jpg')
-  background-color: rgba(0,0,0,.3)
-  background-blend-mode: multiply
+
+
 
 .company-name
   display: var(--display-primary)
@@ -255,9 +264,7 @@ section
     span
       margin-block: auto
   
-#banner2
-  .hero_content
-    background-image: url('/images/omar-prestwich-MiJXjRxkueI-unsplash.jpg')
+
 
 
 /* MEDIA */
@@ -266,6 +273,7 @@ section
   :root
     --display-primary: block
     --display-mobile: none
+    --svg-height: 5em
 
   .header
     p

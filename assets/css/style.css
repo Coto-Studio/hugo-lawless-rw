@@ -10,14 +10,14 @@
   --text-color: var(--clr-neutral-800);
   --background: var(--clr-neutral-100);
   --background-alt: var(--clr-neutral-400);
-  --ff-primary: Roboto, Helvetica, sans-serif;
-  --ff-display: "Josefin Sans", serif;
   --mobile-margin: 0.8rem;
   --break-point: 50em;
   --span-height: 6px;
   --grid-gap: 1rem;
   --display-primary: none;
   --display-mobile: inherit;
+  --ff-primary: Roboto, Helvetica, sans-serif;
+  --ff-display: "Josefin Sans", serif;
   --fw-400: 400;
   --fw-700: 700;
   --fw-900: 900;
@@ -28,6 +28,8 @@
   --space-2: 2rem;
   --space-3: 3rem;
   --space-4: 4rem;
+  --svg-clr: var(--clr-neutral-800);
+  --svg-height: 3em;
 }
 
 :is(body, input, select, textarea) {
@@ -83,6 +85,11 @@ p {
 .bg-neutral-800 {
   background-color: var(--clr-neutral-800);
 }
+.bg-image {
+  background-image: var(--bg-image);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+}
 
 .headline {
   font-family: var(--ff-display);
@@ -124,6 +131,15 @@ p {
   text-align: center;
 }
 
+/* Exceptions */
+#hero {
+  --bg-image: url("/images/cameron-venti-_MjAjDQQgrY-unsplash.jpg");
+}
+
+#banner2 {
+  --bg-image: url("/images/omar-prestwich-MiJXjRxkueI-unsplash.jpg");
+}
+
 /* HEADER CONTENT */
 .header {
   background: var(--background);
@@ -156,9 +172,8 @@ p {
 }
 
 .logo {
-  --svg-clr: var(--clr-neutral-800);
   width: auto;
-  height: 3em;
+  height: var(--svg-height);
   fill: var(--svg-clr);
   stroke: var(--svg-clr);
 }
@@ -283,12 +298,6 @@ section {
   padding-block: 1em;
 }
 
-.hero_content {
-  background-image: url("/images/cameron-venti-_MjAjDQQgrY-unsplash.jpg");
-  background-color: rgba(0, 0, 0, 0.3);
-  background-blend-mode: multiply;
-}
-
 .company-name {
   display: var(--display-primary);
 }
@@ -331,15 +340,12 @@ section {
   margin-block: auto;
 }
 
-#banner2 .hero_content {
-  background-image: url("/images/omar-prestwich-MiJXjRxkueI-unsplash.jpg");
-}
-
 /* MEDIA */
 @media screen and (min-width: 800px) {
   :root {
     --display-primary: block;
     --display-mobile: none;
+    --svg-height: 5em;
   }
 
   .header p {
