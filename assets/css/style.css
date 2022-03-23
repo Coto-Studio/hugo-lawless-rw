@@ -22,10 +22,10 @@
   /* Settings */
   --display-primary: none;
   --display-mobile: inherit;
-  --header-height-mobile: 2em;
+  --header-height-mobile: 1.5em;
   --header-height-primary: 4em;
   --hamburger-size: 5px;
-  --headline-size-mobile: 2em;
+  --headline-size-mobile: 1.4em;
   --headline-size-primary: 3rem;
   --mobile-margin: 0.8rem;
   --break-point: 50em;
