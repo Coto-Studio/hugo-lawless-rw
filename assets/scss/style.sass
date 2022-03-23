@@ -3,10 +3,10 @@
 
 :is(body, input, select, textarea)
   font-family: var(--ff-primary)
-  font-size: 16pt
-  font-weight: 400
-  line-height: 1.625
   color: var(--text-color)
+  line-height: 1.625
+  font-weight: 400
+  font-size: 16pt
 
 body
   background-color: var(--background)  
@@ -24,7 +24,6 @@ p
  padding-block: var(--grid-gap)
 
 /* Composition */
-
 
 
 
@@ -58,6 +57,10 @@ p
 .span-
   &all
     column-span: all
+
+.flex-
+  &100
+    flex: 1 1 100%
 
 .headline
   font-family: var(--ff-display)
@@ -111,10 +114,10 @@ p
 
 .section-text
   background-color: var(--pure-white)
-  max-width: 60em
+  max-width: 40em
   margin-inline: auto
   padding-inline: 2em
-  columns: 30ch
+  // columns: 30ch
 
 
 /* Exceptions */
@@ -127,6 +130,8 @@ p
 
 .company-name
   display: var(--display-primary)
+
+
 
 
 /* HEADER CONTENT */
@@ -233,7 +238,6 @@ section
   margin-inline: auto
   padding-inline: 3em
 
-    
 .service 
   width: clamp(10em,25em,100%)
   img
