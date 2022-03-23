@@ -119,7 +119,7 @@ p
     flex-shrink: 1
 
 .mobile-name
-  font-size: 2rem
+  font-size: var(--header-height-mobile)
   font-weight: 900
   line-height: 1
   display: var(--display-mobile)
@@ -182,12 +182,12 @@ nav
       &::before
         @include libs.span-selector
         @include libs.nothing
-        bottom: calc(var(--span-height)*2)
+        bottom: calc(var(--hamburger-size)*2)
         
       &::after
         @include libs.span-selector
         @include libs.nothing
-        top: calc(var(--span-height))
+        top: calc(var(--hamburger-size))
         
 
 /* MAIN CONTENT */

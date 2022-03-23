@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 :root {
-  --border-red: red solid 2px;
   --battleship-gray: #848482;
   --rich-black: #010203;
   --pure-white: #FFFFFF;
@@ -10,10 +9,6 @@
   --text-color: var(--clr-neutral-800);
   --background: var(--clr-neutral-100);
   --background-alt: var(--clr-neutral-400);
-  --mobile-margin: 0.8rem;
-  --break-point: 50em;
-  --span-height: 6px;
-  --grid-gap: 1rem;
   --display-primary: none;
   --display-mobile: inherit;
   --ff-primary: Roboto, Helvetica, sans-serif;
@@ -28,8 +23,13 @@
   --space-2: 2rem;
   --space-3: 3rem;
   --space-4: 4rem;
+  --header-height-mobile: 2em;
+  --hamburger-size: 5px;
+  --mobile-margin: 0.8rem;
+  --break-point: 50em;
+  --grid-gap: 1rem;
   --svg-clr: var(--clr-neutral-800);
-  --svg-height: 3em;
+  --svg-height: var(--header-height-mobile);
 }
 
 :is(body, input, select, textarea) {
@@ -155,7 +155,7 @@ p {
 }
 
 .mobile-name {
-  font-size: 2rem;
+  font-size: var(--header-height-mobile);
   font-weight: 900;
   line-height: 1;
   display: var(--display-mobile);
@@ -229,30 +229,30 @@ nav a:hover {
 .nav-toggle-label span {
   display: block;
   background: var(--text-color);
-  height: var(--span-height);
-  width: 2em;
+  height: var(--hamburger-size);
+  width: calc(var(--hamburger-size) * 7);
   border-radius: 2px;
   position: relative;
 }
 .nav-toggle-label span::before {
   display: block;
   background: var(--text-color);
-  height: var(--span-height);
-  width: 2em;
+  height: var(--hamburger-size);
+  width: calc(var(--hamburger-size) * 7);
   border-radius: 2px;
   position: relative;
   content: "";
-  bottom: calc(var(--span-height) * 2);
+  bottom: calc(var(--hamburger-size) * 2);
 }
 .nav-toggle-label span::after {
   display: block;
   background: var(--text-color);
-  height: var(--span-height);
-  width: 2em;
+  height: var(--hamburger-size);
+  width: calc(var(--hamburger-size) * 7);
   border-radius: 2px;
   position: relative;
   content: "";
-  top: calc(var(--span-height));
+  top: calc(var(--hamburger-size));
 }
 
 /* MAIN CONTENT */
