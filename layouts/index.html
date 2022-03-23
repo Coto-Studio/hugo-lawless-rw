@@ -5,7 +5,7 @@
     {{ partial "head/css" . }}
   </head>
   <body>
-    <header class="header drop-shadow sticky">
+    <header class="header drop-shadow-400 sticky">
       <div id="logo-container">
         <a href="/">
           {{ $logo := resources.Get "images/logo/lawless.svg" }}
@@ -26,16 +26,12 @@
       </label>
     </header>
     
-    <main>
-      <!-- Section: Hero -->
-      <section id="hero" class="bg-neutral-400 text-align-center" aria-labelledby="company-name">
-        <header class="banner hero_content">
-          <h1 id="company-name" class="drop-shadow"><span class="company-name headline text-uppercase">Lawless</span> Waterproofing & Restoration</h1>
-          <a href="#contact-us" class="btn">Contact Us</a>
-        </haeder>
-      </section>
-      
+    <main>      
       {{ range where site.RegularPages "Type" "homepage" }}
+        {{ if (eq .Params.section_type "banner")  }}
+          {{ partial "sections/banner" . }}
+        {{ end}}
+        
         {{ if (eq .Params.section_type "text")  }}
           {{ partial "sections/text" . }}
         {{ end}}
@@ -44,17 +40,7 @@
           {{ partial "sections/services" . }}
         {{ end}}
       {{ end }}
-      
-      <!-- Section: Banner -->
-      <section id="banner2" class="bg-neutral-400 text-align-center">
-        <div class="banner hero_content">
-          <h1>We are Versatile</h1>
-          <a href="#contact-us" class="btn">Contact Us</a>
-        </div>
-      </section>
-      
-      <section id="what-we-offer"></section>
     </main>
-    <footer></footer>
+    <footer class="bg-neutral-800" ></footer>
   </body>
 </html>

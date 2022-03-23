@@ -5,4 +5,4 @@ alt: "Building with siding missing"
 fill: "top"
 ---
 
-This is a description of the service.
+We help navigate selecting the proper waterproofing solution to ensure proper application and longevity. As approved applicators for all, we are highly skilled applicators yada yada add more here
