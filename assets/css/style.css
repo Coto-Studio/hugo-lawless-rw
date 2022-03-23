@@ -91,7 +91,7 @@ p {
 }
 
 .drop-shadow {
-  filter: drop-shadow(2px 2px 5px var(--clr-neutral-800));
+  filter: drop-shadow(2px 2px 5px var(--clr-neutral-400));
 }
 
 .sticky {
