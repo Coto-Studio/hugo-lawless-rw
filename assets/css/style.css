@@ -39,9 +39,10 @@
 }
 
 body {
+  outline: 1px solid red;
   background-color: var(--background);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  height: 200vh;
+  margin: 0 auto;
 }
 
 h1,
@@ -93,14 +94,18 @@ p {
   filter: drop-shadow(2px 2px 5px var(--clr-neutral-800));
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+  will-change: transform;
+}
+
 /* HEADER CONTENT */
 .header {
   background: var(--background);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
   width: 100%;
   padding: var(--mobile-margin);
   z-index: 999;
@@ -126,11 +131,15 @@ p {
   display: table;
 }
 
-.logo-primary {
-  display: var(--display-primary);
+.logo {
+  --svg-clr: var(--clr-neutral-800);
+  width: auto;
+  height: 3em;
+  fill: var(--svg-clr);
+  stroke: var(--svg-clr);
 }
-.logo-mobile {
-  display: var(--display-mobile);
+.logo #name {
+  display: var(--display-primary);
 }
 
 nav {

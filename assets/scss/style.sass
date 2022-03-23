@@ -9,9 +9,15 @@
   color: var(--text-color)
 
 body
+  outline: 1px solid red
   background-color: var(--background)
-  display: grid
-  grid-template-rows: auto 1fr auto
+  // display: table
+  // height: fit-content
+  
+  height: 200vh
+  margin: 0 auto
+  // display: grid
+  // grid-template-rows: auto 1fr auto
   // height: 1000%
 
 h1,
@@ -57,6 +63,11 @@ p
 
 .drop-shadow
   filter: drop-shadow(2px 2px 5px var(--clr-neutral-800))
+  
+.sticky
+  position: sticky
+  top: 0
+  will-change: transform
 
 /* HEADER CONTENT */
 .header 
@@ -64,8 +75,6 @@ p
   display: flex
   align-items: center
   justify-content: space-between
-  position: sticky
-  top: 0
   width: 100%
   padding: var(--mobile-margin)
   z-index: 999
@@ -83,10 +92,13 @@ p
   @include libs.nothing
 
 .logo
-  &-primary
+  --svg-clr: var(--clr-neutral-800)
+  width: auto
+  height: 3em
+  fill: var( --svg-clr)
+  stroke: var( --svg-clr)
+  #name
     display: var(--display-primary)
-  &-mobile
-    display: var(--display-mobile)
 
 nav
   background: var(--background)
