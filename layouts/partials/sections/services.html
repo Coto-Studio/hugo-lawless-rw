@@ -3,7 +3,17 @@
   <div class="services">
     <h2 class="headline text-uppercase">Services</h2>
     {{ range where site.RegularPages "Type" "services" }}
-      {{ partial "sections/service" . }}
+      <article class="service">
+        <header class="service_image" >
+          <a href="{{.Permalink}}">
+            {{ with .Resources.GetMatch "header" }}
+              {{ $img := .Resize "1080x"}}
+              <img src="{{ $img.Permalink }}" alt="{{with .Params.alt}}{{ .}}{{else}}{{$.Title}}{{end}}">
+            {{ end }}
+            <p>{{ .Title }}</p>
+          </a>
+        </haeder>
+      </article>
     {{ end }}
   </div>
 </section>
