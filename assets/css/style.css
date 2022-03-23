@@ -1,16 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 :root {
+  /* Design System */
   --battleship-gray: #848482;
   --rich-black: #010203;
   --pure-white: #FFFFFF;
   --clr-neutral-100: #FFFFFF;
   --clr-neutral-400: #848482;
   --clr-neutral-800: #010203;
-  --text-color: var(--clr-neutral-800);
-  --background: var(--clr-neutral-100);
-  --background-alt: var(--clr-neutral-400);
-  --display-primary: none;
-  --display-mobile: inherit;
   --ff-primary: Roboto, Helvetica, sans-serif;
   --ff-display: "Josefin Sans", serif;
   --fw-400: 400;
@@ -23,13 +19,24 @@
   --space-2: 2rem;
   --space-3: 3rem;
   --space-4: 4rem;
+  /* Settings */
+  --display-primary: none;
+  --display-mobile: inherit;
   --header-height-mobile: 2em;
+  --header-height-primary: 4em;
   --hamburger-size: 5px;
+  --headline-size-mobile: 2em;
+  --headline-size-primary: 5em;
   --mobile-margin: 0.8rem;
   --break-point: 50em;
   --grid-gap: 1rem;
+  /* Dynamic Settings */
   --svg-clr: var(--clr-neutral-800);
   --svg-height: var(--header-height-mobile);
+  --headline-size: var(--headline-size-mobile);
+  --text-color: var(--clr-neutral-800);
+  --background: var(--clr-neutral-100);
+  --background-alt: var(--clr-neutral-400);
 }
 
 :is(body, input, select, textarea) {
@@ -48,6 +55,7 @@ body {
 h1,
 h2 {
   padding-block: var(--grid-gap);
+  line-height: 1.2;
 }
 
 p {
@@ -91,9 +99,13 @@ p {
   background-blend-mode: multiply;
 }
 
+.span-all {
+  column-span: all;
+}
+
 .headline {
   font-family: var(--ff-display);
-  font-size: var(--space-3);
+  font-size: var(--headline-size);
   font-weight: var(--fw-900);
   line-height: 1;
 }
@@ -119,16 +131,47 @@ p {
 }
 
 /* Block */
+.banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 250px;
+  color: var(--pure-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--grid-gap);
+  padding-block: 6em;
+}
+
+.btn {
+  background: var(--background);
+  border: solid 2px var(--clr-neutral-800);
+  padding: 12px 26px;
+  max-width: 175px;
+  margin-inline: auto;
+  border-radius: 7px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.btn::before {
+  content: "";
+  margin-bottom: -0.0745em;
+  display: table;
+}
+.btn::after {
+  content: "";
+  margin-top: -0.2765em;
+  display: table;
+}
+
 .section-text {
   background-color: var(--pure-white);
   max-width: 60em;
   margin-inline: auto;
   padding-inline: 2em;
   columns: 30ch;
-}
-.section-text h2 {
-  column-span: all;
-  text-align: center;
 }
 
 /* Exceptions */
@@ -138,6 +181,10 @@ p {
 
 #banner2 {
   --bg-image: url("/images/omar-prestwich-MiJXjRxkueI-unsplash.jpg");
+}
+
+.company-name {
+  display: var(--display-primary);
 }
 
 /* HEADER CONTENT */
@@ -202,9 +249,8 @@ nav li {
   margin-right: var(--mobile-margin);
 }
 nav a {
-  text-decoration: none;
-  text-transform: uppercase;
   opacity: 0;
+  text-decoration: none;
   transition: opacity 150ms ease-in-out;
 }
 nav a:hover {
@@ -256,50 +302,8 @@ nav a:hover {
 }
 
 /* MAIN CONTENT */
-.banner {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  min-height: 250px;
-  color: var(--pure-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--grid-gap);
-  padding-block: 6em;
-}
-.banner h1, .banner h2 {
-  line-height: 1.2;
-}
-
-.btn {
-  background: var(--background);
-  border: solid 2px var(--clr-neutral-800);
-  padding: 12px 26px;
-  max-width: 175px;
-  margin-inline: auto;
-  border-radius: 7px;
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 1rem;
-}
-.btn::before {
-  content: "";
-  margin-bottom: -0.0745em;
-  display: table;
-}
-.btn::after {
-  content: "";
-  margin-top: -0.2765em;
-  display: table;
-}
-
 section {
   padding-block: 1em;
-}
-
-.company-name {
-  display: var(--display-primary);
 }
 
 #services {
@@ -315,13 +319,6 @@ section {
   max-width: 60em;
   margin-inline: auto;
   padding-inline: 3em;
-}
-.services h2 {
-  flex: 1 1 100%;
-  text-align: center;
-}
-.services a {
-  color: var(--pure-white);
 }
 
 .service {
@@ -345,7 +342,8 @@ section {
   :root {
     --display-primary: block;
     --display-mobile: none;
-    --svg-height: 5em;
+    --svg-height: var(--header-height-primary);
+    --headline-size: var(--headline-size-primary);
   }
 
   .header p {

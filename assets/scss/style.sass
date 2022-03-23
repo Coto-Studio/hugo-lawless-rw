@@ -17,6 +17,7 @@ body
 h1,
 h2
   padding-block: var(--grid-gap)
+  line-height: 1.2
   
 p
  font-weight: normal
@@ -53,11 +54,14 @@ p
     background-image: var(--bg-image)
     background-color: rgba(0,0,0,.3)
     background-blend-mode: multiply
-  
+
+.span-
+  &all
+    column-span: all
 
 .headline
   font-family: var(--ff-display)
-  font-size: var(--space-3)
+  font-size: var(--headline-size)
   font-weight: var(--fw-900)
   line-height: 1
 
@@ -80,6 +84,30 @@ p
 
 /* Block */
 
+.banner
+  background-repeat: no-repeat
+  background-size: cover  
+  background-position: center center 
+  min-height: 250px
+  color: var(--pure-white)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: var(--grid-gap)
+  padding-block: 6em
+
+.btn
+  background: var(--background)
+  border: solid 2px var(--clr-neutral-800)
+  padding: 12px 26px
+  max-width: 175px
+  margin-inline: auto
+  border-radius: 7px
+  color: var(--text-color)
+  text-decoration: none
+  font-size: 1rem
+  @include libs.trim-font
+  @include libs.nothing
 
 .section-text
   background-color: var(--pure-white)
@@ -87,11 +115,6 @@ p
   margin-inline: auto
   padding-inline: 2em
   columns: 30ch
-  
-  h2
-    column-span: all
-    text-align: center
-
 
 
 /* Exceptions */
@@ -102,7 +125,8 @@ p
 #banner2
   --bg-image: url('/images/omar-prestwich-MiJXjRxkueI-unsplash.jpg') 
 
-
+.company-name
+  display: var(--display-primary)
 
 
 /* HEADER CONTENT */
@@ -155,9 +179,8 @@ nav
     margin-right: var(--mobile-margin)
     
   a
-    text-decoration: none
-    text-transform: uppercase
     opacity: 0
+    text-decoration: none
     transition: opacity 150ms ease-in-out
     &:hover
       color: var(--accent)
@@ -192,44 +215,9 @@ nav
 
 /* MAIN CONTENT */
 
-// Components
-.banner
-  background-repeat: no-repeat
-  background-size: cover  
-  background-position: center center 
-  min-height: 250px
-  color: var(--pure-white)
-  display: flex
-  flex-direction: column
-  justify-content: center
-  gap: var(--grid-gap)
-  padding-block: 6em
-  h1, h2
-    line-height: 1.2
-
-.btn
-  background: var(--background)
-  border: solid 2px var(--clr-neutral-800)
-  padding: 12px 26px
-  max-width: 175px
-  margin-inline: auto
-  border-radius: 7px
-  color: var(--text-color)
-  text-decoration: none
-  font-size: 1rem
-  @include libs.trim-font
-  @include libs.nothing
-
 // Sections
 section
   padding-block: 1em
-
-
-
-
-.company-name
-  display: var(--display-primary)
-  
 
 #services
   background-color: var(--background-alt)
@@ -244,13 +232,7 @@ section
   max-width: 60em
   margin-inline: auto
   padding-inline: 3em
-  
-  h2
-    flex: 1 1 100%
-    text-align: center
-  
-  a
-    color: var(--pure-white)
+
     
 .service 
   width: clamp(10em,25em,100%)
@@ -263,8 +245,6 @@ section
     align-content: center
     span
       margin-block: auto
-  
-
 
 
 /* MEDIA */
@@ -273,7 +253,8 @@ section
   :root
     --display-primary: block
     --display-mobile: none
-    --svg-height: 5em
+    --svg-height: var(--header-height-primary)
+    --headline-size: var(--headline-size-primary)
 
   .header
     p
