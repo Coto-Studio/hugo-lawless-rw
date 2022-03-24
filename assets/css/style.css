@@ -70,6 +70,22 @@ p {
 }
 
 /* Composition */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: min(90%, 30em);
+  margin-inline: auto;
+}
+
+header {
+  padding-block-end: 1em;
+}
+
+section {
+  padding-block: 2em;
+}
+
 /* Utility */
 .text-neutral-100 {
   color: var(--clr-neutral-100);
@@ -318,13 +334,8 @@ nav a:hover {
 }
 
 /* MAIN CONTENT */
-section {
-  padding-block: 1em;
-}
-
 #services {
   background-color: var(--background-alt);
-  padding-block: var(--grid-gap);
 }
 
 .services {

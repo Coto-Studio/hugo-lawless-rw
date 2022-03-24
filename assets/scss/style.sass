@@ -29,7 +29,19 @@ p
 
 /* Composition */
 
+.gallery
+  display: flex
+  flex-wrap: wrap
+  gap: 1em
+  width: min(90%, 30em)
+  margin-inline: auto
+  
+header
+  padding-block-end: 1em
 
+// Sections
+section
+  padding-block: 2.6em
 
 /* Utility */
 .text-
@@ -228,13 +240,8 @@ nav
 
 /* MAIN CONTENT */
 
-// Sections
-section
-  padding-block: 1em
-
 #services
   background-color: var(--background-alt)
-  padding-block: var(--grid-gap)
 
 .services
   display: flex

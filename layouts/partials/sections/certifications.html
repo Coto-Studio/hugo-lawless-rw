@@ -1,0 +1,11 @@
+<section id="certifications">
+  <header class="text-align-center headline uppercase">
+    <h2>{{.Title}}</h2>
+  </header>
+  {{ $gallery := resources.Match "images/certifications/*"  }}
+  <div class="gallery">
+    {{ range $gallery }}
+    <img src="{{ .Permalink }}" alt="" class="drop-shadow-400" >
+    {{ end }}    
+  </div>
+</section>

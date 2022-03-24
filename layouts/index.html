@@ -39,6 +39,10 @@
         {{ if (eq .Params.section_type "services")  }}
           {{ partial "sections/services" . }}
         {{ end}}
+
+        {{ if (eq .Params.section_type "certifications")  }}
+          {{ partial "sections/certifications" . }}
+        {{ end}}
       {{ end }}
     </main>
     <footer class="bg-neutral-800 text-neutral-100" >
