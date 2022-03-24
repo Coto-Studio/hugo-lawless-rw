@@ -239,21 +239,22 @@ section
   padding-inline: 3em
 
 .service 
-  width: clamp(10em,25em,100%)
-  img
-    max-height: 97px
-  .service_image
-    display: flex
-    gap: 0.5em
-    justify-content: start
-    align-content: center
-    span
-      margin-block: auto
+  max-width: 20ch
+  padding-bottom: 1em
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  header
+    min-height: 340px
+  // button
+  //   border: none
 
+.push-end
+  margin-top: 1em
 
 /* MEDIA */
  
-@media screen and (min-width: 800px)
+@media screen and (min-width: libs.$breakpoint-mobile)
   :root
     --display-primary: block
     --display-mobile: none

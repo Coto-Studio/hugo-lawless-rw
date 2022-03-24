@@ -6,7 +6,7 @@
 [[main]]
   identifier = "services"
   name = "Services"
-  url = "#servives"
+  url = "#services"
   weight = 20
 [[main]]
   identifier = "contact"
