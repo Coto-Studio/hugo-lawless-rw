@@ -8,6 +8,10 @@
   font-weight: 400
   font-size: 16pt
 
+html
+  scroll-padding-top: calc(var(--headline-size) + 4em)
+  scroll-behavior: smooth
+
 body
   background-color: var(--background)  
   height: fit-content
@@ -84,6 +88,11 @@ p
   * > *
     outline: 1px solid red
 
+.border-radius
+  border-radius: var(--border-radius)
+
+.margin-auto
+  margin: auto
 
 /* Block */
 
@@ -105,7 +114,6 @@ p
   padding: 12px 26px
   max-width: 175px
   margin-inline: auto
-  border-radius: 7px
   color: var(--text-color)
   text-decoration: none
   font-size: 1rem
