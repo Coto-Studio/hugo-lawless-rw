@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 :root {
   /* Design System */
   --battleship-gray: #848482;
@@ -44,7 +44,7 @@
   font-family: var(--ff-primary);
   color: var(--text-color);
   line-height: 1.625;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 16pt;
 }
 
@@ -336,6 +336,7 @@ nav a:hover {
 /* MAIN CONTENT */
 #services {
   background-color: var(--background-alt);
+  background-image: url("/images/phil-cruz-AehBpEOj6SI-unsplash.jpg");
 }
 
 .services {
@@ -349,6 +350,7 @@ nav a:hover {
 }
 
 .service {
+  box-shadow: 2px 2px 5px var(--clr-neutral-800);
   max-width: 20ch;
   padding-bottom: 1em;
   display: flex;
@@ -358,13 +360,17 @@ nav a:hover {
 .service header {
   min-height: 340px;
 }
+.service header h3 {
+  width: 95%;
+  margin-inline: auto;
+}
 
 .push-end {
   margin-top: 1em;
 }
 
 /* MEDIA */
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 43.75em) {
   :root {
     --display-primary: block;
     --display-mobile: none;
