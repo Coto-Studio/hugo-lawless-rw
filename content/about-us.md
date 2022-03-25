@@ -1,8 +1,8 @@
 ---
-title: "Our Team"
-name: "our-team"
+title: "About Us"
+name: "about-us"
 section_type: "text"
-weight: 2
+weight: 4
 ---
 
 Lawless was founded by a coalition of colleagues and industry experts during the pandemic in 2021. Our strong, knowledgeable leadership team has been recognized and respected throughout New England for many years for specializing in waterproofing, restoration and building envelope services. Parking and property management companies, building owners, engineers, architects, and other contractors chose us for our dedication to quality, communication, and service.

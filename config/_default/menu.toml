@@ -1,15 +1,20 @@
 [[main]]
+  identifier = "home"
+  name = "Home"
+  url = "#about-us"
+  weight = 10
+[[main]]
   identifier = "about-us"
   name = "About Us"
   url = "#about-us"
-  weight = 10
+  weight = 20
 [[main]]
   identifier = "services"
   name = "Services"
   url = "#services"
-  weight = 20
+  weight = 30
 [[main]]
   identifier = "contact"
   name = "Contact Us"
   url = "#contact-us"
-  weight = 30
+  weight = 40

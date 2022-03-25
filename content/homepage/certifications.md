@@ -1,6 +1,6 @@
 ---
-title: "Certifications"
-name: "certifications"
+title: "Approved Applicators & Certifications"
+name: "applicators"
 section_type: "certifications"
 weight: 5
 ---

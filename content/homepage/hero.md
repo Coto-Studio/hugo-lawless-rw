@@ -5,4 +5,4 @@ section_type: "banner"
 weight: 1
 ---
 
-<span class='company-name headline text-uppercase'>Lawless</span> Waterproofing & Restoration
+<span class='company-name text-uppercase'>Lawless</span> Waterproofing & Restoration
