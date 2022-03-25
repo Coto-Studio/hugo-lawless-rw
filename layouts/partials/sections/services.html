@@ -1,9 +1,9 @@
 <!-- Section: Services -->
 <section id="services" class="bg-neutral-400 text-neutral-100">
   <div class="services">
-    <h2 class="headline text-uppercase flex-100 text-align-center">Services</h2>
+    <h2 class="headline text-uppercase flex-100 text-align-center drop-shawdow-800">Services</h2>
     {{ range where site.RegularPages "Type" "services" }}
-      <article class="service border-radius bg-neutral-100 drop-shadow-800">
+      <article class="service border-radius bg-neutral-100 ">
         <header class="text-neutral-800 text-align-center" >
           <a href="{{.Permalink}}" class="text-neutral-100">
             {{ $banner := resources.GetMatch .Params.banner}}

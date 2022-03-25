@@ -18,7 +18,8 @@ body
   // grid-template-rows: auto 1fr auto
 
 h1,
-h2
+h2,
+h3
   padding-block: var(--grid-gap)
   line-height: 1.2
   
@@ -31,12 +32,16 @@ p
 .gallery
   display: flex
   flex-wrap: wrap
+  justify-content: space-evenly
   gap: 1em
-  width: min(90%, 30em)
   margin-inline: auto
   
 header
   padding-block-end: 1em
+
+.single-colunm
+  width: var(--global-width)
+  margin-inline: auto
 
 // Sections
 section
@@ -106,6 +111,9 @@ section
 .margin-auto
   margin: auto
 
+.display-none
+  display: none
+
 /* Block */
 
 .banner
@@ -134,12 +142,8 @@ section
 
 .section-text
   background-color: var(--pure-white)
-  max-width: 40em
   margin-inline: auto
-  padding-inline: 2em
-  // columns: 30ch
-
-
+  
 /* Exceptions */
 
 #hero
@@ -249,7 +253,6 @@ nav
   flex-wrap: wrap
   justify-content: center
   gap: var(--grid-gap)
-  max-width: 60em
   margin-inline: auto
   padding-inline: 3em
 
@@ -261,7 +264,6 @@ nav
   flex-direction: column
   justify-content: space-between
   header
-    min-height: 340px
     h3
       width: 95%
       margin-inline: auto

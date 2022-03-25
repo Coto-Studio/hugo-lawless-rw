@@ -1,7 +1,11 @@
 <!-- Section: {{ .Params.name }} -->
 <section id="{{ .Params.name }}" class="bg-neutral-400 text-align-center" aria-labelledby="company-name">
   <header class="banner bg-image">
-    <h1 class="headline drop-shadow-800">{{ .Content | safeHTML }}</h1>
-    <a href="#contact-us" class="btn text-uppercase border-radius">Contact us</a>
+    <h2 class="headline drop-shadow-800 text-uppercase">{{ .Title | safeHTML }}</h2>
+    <p class="headline">{{ .Params.subtitle }}</p>
   </haeder>
+  <div class="single-colunm">
+    {{ .Content }}
+  </div>
+  <a href="#contact-us" class="btn text-uppercase border-radius">Contact us</a>
 </section>
