@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <section id="404" class="bg-neutral-400">
+    <header class="banner text-align-center">
+      <h1 class="headline">404 File Not Found</h1>
+      {{ $whoops := resources.Get "images/whoops.jpg" }}
+      {{ $whoops = $whoops.Resize "x640 r270" }}
+      <a href="/" class="text-neutral-100">
+        <img class="mx-auto display-block" src="{{ $whoops.Permalink }}" alt="Man looking suprisezed."  >
+        <p>Return home</p>
+      </a>
+    </header>
+  </section>
+{{ end }}
