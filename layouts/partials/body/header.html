@@ -1,0 +1,20 @@
+<header class="header drop-shadow-400 sticky">
+  <div id="logo-container">
+    <a href="/">
+      {{ $logo := resources.Get "images/logo/lawless.svg" }}
+      {{ $logo.Content | safeHTML }}
+    </a>
+  </div>
+  <div class="mobile-name headline text-uppercase">Lawless</div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav class="navbar">
+    <ul>
+      {{ range .Site.Menus.main }}
+        <li><a class="text-neutral-800" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+</header>

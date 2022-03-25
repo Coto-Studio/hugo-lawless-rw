@@ -1,52 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {{ partial "head/metadata" . }}
-    {{ partial "head/css" . }}
-  </head>
-  <body>
-    <header class="header drop-shadow-400 sticky">
-      <div id="logo-container">
-        <a href="/">
-          {{ $logo := resources.Get "images/logo/lawless.svg" }}
-          {{ $logo.Content | safeHTML }}
-        </a>
-      </div>
-      <div class="mobile-name headline text-uppercase">Lawless</div>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <nav class="navbar">
-        <ul>
-          {{ range .Site.Menus.main }}
-            <li><a class="text-neutral-800" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-      </nav>
-      <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
-      </label>
-    </header>
+{{ define "main" }}
+  {{ range where site.RegularPages "Type" "homepage" }}
+    {{ if (eq .Params.section_type "banner")  }}
+      {{ partial "sections/banner" . }}
+    {{ end}}
     
-    <main>      
-      {{ range where site.RegularPages "Type" "homepage" }}
-        {{ if (eq .Params.section_type "banner")  }}
-          {{ partial "sections/banner" . }}
-        {{ end}}
-        
-        {{ if (eq .Params.section_type "text")  }}
-          {{ partial "sections/text" . }}
-        {{ end}}
-        
-        {{ if (eq .Params.section_type "services")  }}
-          {{ partial "sections/services" . }}
-        {{ end}}
-
-        {{ if (eq .Params.section_type "certifications")  }}
-          {{ partial "sections/certifications" . }}
-        {{ end}}
-      {{ end }}
-    </main>
-    <footer class="bg-neutral-800 text-neutral-100" >
-      <p>This is the footer</p>
-    </footer>
-  </body>
-</html>
+    {{ if (eq .Params.section_type "text")  }}
+      {{ partial "sections/text" . }}
+    {{ end}}
+    
+    {{ if (eq .Params.section_type "services")  }}
+      {{ partial "sections/services" . }}
+    {{ end}}
+  
+    {{ if (eq .Params.section_type "certifications")  }}
+      {{ partial "sections/certifications" . }}
+    {{ end}}
+  {{ end }}
+{{ end }}
