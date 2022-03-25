@@ -8,7 +8,7 @@
           <a href="{{.Permalink}}" class="text-neutral-100">
             {{ $banner := resources.GetMatch .Params.banner}}
             {{ if $banner }}
-              {{ $banner := $banner.Fill (printf "1080x1080 %s" .Params.fill) }}
+              {{ $banner := $banner.Fill (printf "1080x600 %s" .Params.fill) }}
               <img src="{{$banner.Permalink}}" alt="{{with .Params.alt}}{{.}}{{else}}{{.Title}}{{end}}">
             {{ end }}
           </a>
