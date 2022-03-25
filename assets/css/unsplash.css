@@ -1,0 +1,8 @@
+{{ $images := resources.Match "images/unsplash/*" }}
+
+{{ range $elem_index, $img := $images }}
+{{ $img := $img.Resize $.Site.Params.bgImgSize }}
+{{ printf ".bg-unsplash-img-%s" (string $elem_index) }}{
+ background-image: url({{ $img.Permalink }});
+}
+{{ end }}

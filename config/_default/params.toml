@@ -2,6 +2,9 @@ images = ["images/lawless-logo.png"]
 description = "Restoration & Waterproofing"
 keywords = "Construction, waterproofing"
 
+##
+bgImgSize = "4096x2160 q100"
+
 [[themeColor]]
   schema = "light"
   content = "#ffffff"
