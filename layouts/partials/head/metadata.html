@@ -3,6 +3,8 @@
 <meta name="keywords" content="{{ if .Keywords }}{{ .Keywords }}{{else}}{{ .Site.Params.Keywords}}{{end}}">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+{{ template "_internal/opengraph.html" . }}
+
 {{ range .Site.Params.themeColor }}
   <meta 
     name="theme-color" 
