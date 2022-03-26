@@ -6,9 +6,9 @@ alt: "Truck mixing conrete."
 fill: ""
 ---
 
-Grinding
-Shot blasting
-Water jetting
-Coating removal
-Moisture testing
-GPR
+- Grinding
+- Shot blasting
+- Water jetting
+- Coating removal
+- Moisture testing
+- GPR

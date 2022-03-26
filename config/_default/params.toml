@@ -1,10 +1,14 @@
+##
 images = ["images/lawless-logo.png"]
 description = "Restoration & Waterproofing"
 keywords = "Construction, waterproofing"
 title = 'Lawless Restoration & Waterproofing'
 
-##
+## Theme Params
 bgImgSize = "2080x q100"
+phone = "970-302-0535"
+address = ""
+email = "info@lawlessrw.com"
 
 [[themeColor]]
   schema = "light"
