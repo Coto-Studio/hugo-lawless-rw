@@ -1,5 +1,5 @@
 ---
-title: "Lawless Restoration & Waterproofing"
+title: "<span class='company-name text-uppercase'>Lawless</span> Waterproofing & Restoration"
 name: "hero"
 section_type: "banner"
 weight: 1

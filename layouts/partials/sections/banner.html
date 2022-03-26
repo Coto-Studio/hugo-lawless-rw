@@ -1,6 +1,6 @@
 <!-- Section: {{ .Params.name }} -->
-<section id="{{ .Params.name }}" class="bg-neutral-400 text-align-center" aria-labelledby="company-name">
-  <header class="banner {{with .Params.bannerImg}}{{.}}{{end}}">
+<section id="{{ .Params.name }}" class="bg-neutral-400 text-align-center padding-block-1 " aria-labelledby="company-name">
+  <header class="banner {{with .Params.bannerImg}}{{.}}{{end}} bg-image">
     <h2 class="headline drop-shadow-800 text-uppercase">{{ .Title | safeHTML }}</h2>
     <p class="headline">{{ .Params.subtitle }}</p>
   </haeder>

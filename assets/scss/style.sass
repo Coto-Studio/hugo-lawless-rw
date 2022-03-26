@@ -33,17 +33,12 @@ p
   justify-content: space-evenly
   gap: 1em
   margin-inline: auto
-  
-header
-  padding-block-end: 1em
+    
 
 .single-colunm
   width: var(--global-width)
   margin-inline: auto
 
-// Sections
-section
-  padding-block: 2em
 
 /* Utility */
 .text-
@@ -68,9 +63,21 @@ section
   &neutral-800
     background-color: var(--clr-neutral-800)
   &image
-    background-image: var(--bg-image)
     background-color: rgba(0,0,0,.3)
     background-blend-mode: multiply
+
+.padding-
+  &block-1
+    padding-block: 1em
+  &block-2
+    padding-block: 2em
+  &block-3
+    padding-block: 3em
+  &block-4
+    padding-block: 4em
+  &block-default
+    padding-block: var(--padding-default)
+    
 
 .span-
   &all
@@ -237,11 +244,6 @@ nav
 
 /* MAIN CONTENT */
 
-#services
-  background-color: var(--background-alt)
-  background-repeat: no-repeat
-  background-size: cover  
-  background-position: center center
 
 .services
   display: flex

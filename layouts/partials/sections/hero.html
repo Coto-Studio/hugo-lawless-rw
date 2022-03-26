@@ -1,7 +1,6 @@
-<!-- Section: {{ .Params.name }} -->
-<section id="{{ .Params.name }}" class="bg-neutral-400 text-align-center" aria-labelledby="company-name">
-  <header class="banner bg-unsplash-img-0">
-    <h1 class="headline drop-shadow-800">{{ .Content | safeHTML }}</h1>
+<header class="bg-neutral-400 text-align-center padding-block-1" >
+  <div class="banner bg-image bg-unsplash-img-0 ">
+    <h1 class="headline drop-shadow-800">{{ .Title | safeHTML }}</h1>
     <a href="#contact-us" class="btn text-uppercase border-radius">Contact us</a>
-  </haeder>
-</section>
+  </div>
+</haeder>

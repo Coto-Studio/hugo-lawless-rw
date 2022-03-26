@@ -1,6 +1,9 @@
 {{ define "main" }}
-  {{ partial "sections/hero" . }}
-
+  <!-- Section: {{ .Params.name }} -->
+  <section id="{{ .Params.name }}" aria-labelledby="company-name">
+    {{ partial "sections/hero" . }}
+  </section>
+  
   {{ range where site.RegularPages "Type" "homepage" }}
     {{ if (eq .Params.section_type "banner")  }}
       {{ partial "sections/banner" . }}
