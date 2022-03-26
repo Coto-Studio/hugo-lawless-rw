@@ -1,6 +1,7 @@
 images = ["images/lawless-logo.png"]
 description = "Restoration & Waterproofing"
 keywords = "Construction, waterproofing"
+title = 'Lawless Restoration & Waterproofing'
 
 ##
 bgImgSize = "2080x q100"

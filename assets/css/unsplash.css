@@ -6,3 +6,7 @@
  background-image: url({{ $img.Permalink }});
 }
 {{ end }}
+
+.bg-img-custom{
+  background-image: var(--bg-url) 
+}

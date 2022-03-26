@@ -3,6 +3,8 @@
   <head>
     {{ partial "head/metadata" . }}
     {{ partial "head/css" . }}
+    {{ block "background" . }}
+    {{ end }}
   </head>
   <body>
     {{ partial "body/header" . }}
