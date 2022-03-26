@@ -1,6 +1,6 @@
 ---
 title: "Historical Restoration and Facade Cleaning"
-banner: "images/services/IMG_3786.jpg"
+banner: "images/services/IMG_3787.jpg"
 bgImgClass: "bg-img-custom"
 fill: ""
 alt: ""
