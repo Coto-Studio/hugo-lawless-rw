@@ -1,5 +1,6 @@
 ---
 title: "Waterproofing and Traffic Coating"
+bgImgClass: "bg-img-custom"
 banner: "images/services/IMG_4738.jpg"
 alt: "Building with siding missing"
 fill: "top"

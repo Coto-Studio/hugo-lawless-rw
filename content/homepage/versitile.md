@@ -2,7 +2,7 @@
 title: "We are versitile"
 subtitle: "We can do more for you"
 name: "banner2"
-bannerImg: "bg-unsplash-img-2"
+bannerImg: "bg-img-unsplash-2"
 section_type: "banner"
 weight: 6
 ---

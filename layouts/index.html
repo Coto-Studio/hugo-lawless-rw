@@ -1,7 +1,7 @@
 {{ define "main" }}
   <!-- Section: {{ .Params.name }} -->
   <section id="{{ .Params.name }}" aria-labelledby="company-name">
-    {{ partial "sections/hero" . }}
+    {{ partial "body/hero" . }}
   </section>
   
   {{ range where site.RegularPages "Type" "homepage" }}

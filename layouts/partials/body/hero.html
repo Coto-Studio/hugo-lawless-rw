@@ -1,6 +1,6 @@
 <header class="bg-neutral-400 text-align-center padding-block-1" >
-  <div class="banner bg-image bg-unsplash-img-0 ">
+  <div class="banner bg-image {{with .Params.bgImgClass}}{{.}}{{end}}">
     <h1 class="headline drop-shadow-800">{{ .Title | safeHTML }}</h1>
     <a href="#contact-us" class="btn text-uppercase border-radius">Contact us</a>
   </div>
-</haeder>
+</header>
