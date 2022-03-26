@@ -1,9 +1,10 @@
 ---
 title: "Caulking and Sealants"
-banner: "images/services/IMG_3786.jpg"
+banner: "images/services/IMG_8261.jpg"
 bgImgClass: "bg-img-custom"
-fill: ""
+fill: "center"
 alt: ""
+weight: 2
 ---
 
 - Inspections, leak/water testing and recommendations on proper material selection
