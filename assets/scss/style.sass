@@ -39,6 +39,28 @@ p
   width: var(--global-width)
   margin-inline: auto
 
+.contact
+  max-width: 46em
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  
+.company-info
+  width: 20em
+  
+.form
+  width: 26em
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  & > *
+    margin-block: 0.125em
+
+#message
+  // width: 275px
+
+.row
+  align-content: end
 
 /* Utility */
 .text-
@@ -77,7 +99,12 @@ p
     padding-block: 4em
   &block-default
     padding-block: var(--padding-default)
-    
+  &all-1
+    padding: 1em
+  &all-2
+    padding: 2em
+  &all-3
+    padding: 3em
 
 .span-
   &all
@@ -121,10 +148,12 @@ p
 
 .display-
   &none
-    display: none    
+    display: none
+
+.copyright
+  font-size: var(--fs-300)
 
 /* Block */
-
 .banner
   background-repeat: no-repeat
   background-size: cover  
