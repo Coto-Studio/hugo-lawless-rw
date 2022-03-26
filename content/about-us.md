@@ -1,5 +1,6 @@
 ---
 title: "About Us"
+bgImgClass: "bg-img-unsplash-1"
 name: "about-us"
 section_type: "text"
 weight: 4
