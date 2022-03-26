@@ -11,7 +11,7 @@ address1 = "3 Bessom St, Suite 112."
 address2 = "Marblehead MA 01945"
 email = "info@lawlessrw.com"
 copyright = "&#169; Lawless Restoration & Waterproofing LLC"
-design = "Site design [Coto.Studio](https://coto.studio)"
+design = "Site design <span class='cs'>[Coto.Studio 🇸🇻](https://coto.studio)</span>"
 
 [[themeColor]]
   schema = "light"

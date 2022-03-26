@@ -1,8 +1,8 @@
 ---
 title: "Garage Restoration"
-banner: "images/services/IMG_3786.jpg"
+banner: "images/services/IMG_4999.jpg"
 bgImgClass: "bg-img-custom"
-fill: ""
+fill: "center"
 alt: ""
 weight: 1
 ---

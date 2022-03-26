@@ -5,7 +5,7 @@
   {{ $gallery := resources.Match "images/certifications/*"  }}
   <div class="gallery">
     {{ range $gallery }}
-    <img src="{{ .Permalink }}" alt="" class="drop-shadow-400" >
+    <img src="{{ .Permalink }}" alt="" class="drop-shadow-400 cert-logo" >
     {{ end }}    
   </div>
 </section>
