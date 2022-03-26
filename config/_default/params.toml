@@ -3,7 +3,7 @@ description = "Restoration & Waterproofing"
 keywords = "Construction, waterproofing"
 
 ##
-bgImgSize = "4096x2160 q100"
+bgImgSize = "2080x q100"
 
 [[themeColor]]
   schema = "light"
