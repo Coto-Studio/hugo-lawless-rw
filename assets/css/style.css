@@ -97,7 +97,7 @@ p {
 }
 
 .form {
-  width: 26em;
+  width: 20em;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
