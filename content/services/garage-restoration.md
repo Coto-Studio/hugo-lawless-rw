@@ -8,7 +8,7 @@ weight: 1
 ---
 
 Our garage restoration services include installation and replacement of expansion joints, full scale restoration and maintenance, as well as partial and full depth concrete repairs, shot blasting, grinding, coating and sealant replacement or repairs and structural concrete repair. We also install, repair and maintain
-Concrete Slab Repair & Replacement.
+concrete slab repair & replacement.
 
 - Vehicular & Pedestrian Traffic Coating Systems
 - Expansion Joint Systems

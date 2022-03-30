@@ -30,7 +30,7 @@
   --break-point: 50em;
   --grid-gap: 1rem;
   --border-radius: .4375em;
-  --global-width: min(85%, 30em);
+  --global-width: min(85%, 40em);
   --padding-default: 3em;
   /* Dynamic Settings */
   --svg-clr: var(--clr-neutral-800);
