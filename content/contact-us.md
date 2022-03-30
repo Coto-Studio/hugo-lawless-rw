@@ -1,6 +1,7 @@
 ---
 title: "Contact Us"
 bgImgClass: "bg-img-unsplash-1"
+name: "contact-us"
 type: "contact-page"
 ---
 
