@@ -11,10 +11,10 @@
 [[main]]
   identifier = "services"
   name = "Services"
-  url = "/#services"
+  url = "/services"
   weight = 30
 [[main]]
   identifier = "contact"
   name = "Contact"
-  url = "#contact-us"
+  url = "/contact-us"
   weight = 40

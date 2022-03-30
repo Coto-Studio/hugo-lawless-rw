@@ -1,0 +1,20 @@
+{{define "main" }}
+  {{partial "body/hero" .}}
+  <section class="bg-neutral-800 text-neutral-100 text-align-center padding-block-1">  
+    <div class="contact mx-auto">
+      <p>{{.Content}}</p>
+      <div id="contact-us" class="company-info bg-neutral-100 padding-all-1 text-neutral-800">
+        <p>Phone: <br>{{.Site.Params.phone }}</p>
+        <p>E-mail: <br>{{.Site.Params.email }}</p>
+        <p>Address: <br>{{.Site.Params.address1 }}<br>{{ .Site.Params.address2 }}</p>
+      </div>
+      <form action="#" class="form bg-neutral-400 padding-all-2">
+        <input type="text" id="name" placeholder="Name"/>
+        <input type="text" id="company" placeholder="Company"/>
+        <input type="email" name="email" id="email" placeholder="E-Mail"/>
+        <input type="text" id="phone" placeholder="Phone"/>
+        <textarea type="text" name="message" id="message" rows="6" placeholder="Message"></textarea>
+        <button>Submit</button>
+      </form>
+  </section>
+{{end}}
