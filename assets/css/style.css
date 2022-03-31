@@ -347,7 +347,7 @@ p {
   height: var(--svg-height);
   fill: var(--svg-clr);
   stroke: var(--svg-clr);
-  margin-left: var(--mobile-margin);
+  padding-left: var(--mobile-margin);
 }
 .logo #name {
   display: var(--display-primary);
@@ -379,7 +379,7 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
-  margin-right: var(--mobile-margin);
+  padding-right: var(--mobile-margin);
 }
 nav ul {
   margin: 0;
@@ -483,7 +483,7 @@ nav a:hover {
 
   nav {
     all: unset;
-    margin-right: var(--mobile-margin);
+    padding-right: var(--mobile-margin);
   }
   nav a {
     opacity: 1;
