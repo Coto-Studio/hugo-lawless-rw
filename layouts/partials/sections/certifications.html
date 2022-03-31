@@ -1,9 +1,9 @@
-<section id="certifications" class="single-colunm-extended padding-block-default">
-  <header class="text-align-center">
-    <h2 class="headline text-uppercase">{{.Title}}</h2>
+<section id="certifications" class="padding-block-default">
+  <header class="text-align-center padding-block-1">
+    <h2 class="headline text-uppercase">{{.Title | safeHTML }}</h2>
   </header>
   {{ $gallery := resources.Match "images/certifications/*"  }}
-  <div class="gallery">
+  <div class="single-colunm-extended  gallery">
     {{ range $gallery }}
     <img src="{{ .Permalink }}" alt="" class="drop-shadow-400 cert-logo" >
     {{ end }}    

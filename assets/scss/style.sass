@@ -3,9 +3,9 @@
 :is(body, input, select, textarea)
   font-family: var(--ff-primary)
   color: var(--text-color)
+  font-size: var(--fs-400)
   line-height: 1.625
   font-weight: 700
-  font-size: 16pt
 
 html
   scroll-padding-top: calc(var(--headline-size) + 4em)
@@ -14,12 +14,17 @@ html
 body
   background-color: var(--background)  
   height: fit-content
+  max-width: 100em
+  margin-inline: auto
 
 h1,
-h2,
+h2
+  padding-block: var(--grid-gap)
+
 h3
   padding-block: var(--grid-gap)
   line-height: 1.2
+  font-size: var(--fs-600)
   
 p
  font-weight: normal
@@ -127,9 +132,18 @@ p
 
 .headline
   font-family: var(--ff-display)
-  font-size: var(--headline-size)
+  font-size: var(--fs-xl)
   font-weight: var(--fw-700)
   line-height: 1
+  width: 98%
+  margin-inline: auto
+
+.sub-headline
+  font-family: var(--ff-primary)
+  font-size: var(--fs-600)
+  font-weight: var(--fw-400)
+  display: table
+  margin-inline: auto
 
 .drop-shadow
   &-400
@@ -186,11 +200,10 @@ p
   background: var(--background)
   border: solid 2px var(--clr-neutral-800)
   padding: 12px 26px
-  max-width: 175px
   margin-inline: auto
   color: var(--text-color)
   text-decoration: none
-  font-size: 1rem
+  font-size: var(--fs-400)
   @include libs.trim-font
   @include libs.nothing
 
@@ -198,33 +211,28 @@ p
   background: var(--clr-neutral-400)
   border: solid 2px var(--clr-neutral-800)
   padding: 12px 26px
-  max-width: 175px
   margin-inline: auto
   color: var(--clr-neutral-100)
   text-decoration: none
-  font-size: 1rem
+  font-size: var(--fs-400)
   @include libs.trim-font
   @include libs.nothing
 
 .section-text
   background-color: var(--pure-white)
   margin-inline: auto
-  font-size: 14pt
   
 /* Exceptions */
 
 .company-name
   &-p1
     display: var(--display-primary)
-  &-p2
-    font-family: serif
-    font-weight: 300
-    font-size: 2.6rem
-    text-transform: uppercase
 
 /* HEADER CONTENT */
-.header 
+.site-header 
+  font-size: var(--fs-header)
   background: var(--background)
+  font-weight: 900
   display: flex
   align-items: center
   justify-content: space-between
@@ -235,14 +243,6 @@ p
   & > *
     flex-shrink: 1
 
-.mobile-name
-  font-size: var(--header-height-mobile)
-  font-weight: 900
-  line-height: 1
-  display: var(--display-mobile)
-  @include libs.trim-font
-  @include libs.nothing
-
 .logo
   width: auto
   height: var(--svg-height)
@@ -250,6 +250,14 @@ p
   stroke: var( --svg-clr)
   #name
     display: var(--display-primary)
+
+.mobile-header-name
+  font-family: var(--ff-display)
+  display: var(--display-mobile)
+  line-height: 1
+  @include libs.trim-font
+  @include libs.nothing
+
 
 nav
   background: var(--background)
@@ -342,8 +350,7 @@ nav
   :root
     --display-primary: block
     --display-mobile: none
-    --svg-height: var(--header-height-primary)
-    --headline-size: var(--headline-size-primary)
+    --card-max-width: var(--card-size-large)
 
   .header
     p

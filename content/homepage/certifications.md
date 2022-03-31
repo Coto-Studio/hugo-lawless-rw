@@ -1,5 +1,5 @@
 ---
-title: "Approved Applicators & Certifications"
+title: "Approved <span class='sub-headline'>Applicators & Certifications</span>"
 name: "applicators"
 section_type: "certifications"
 weight: 5

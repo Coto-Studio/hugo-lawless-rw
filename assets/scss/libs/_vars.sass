@@ -15,8 +15,13 @@
   --fw-700: 700
   --fw-900: 900
   
-  --fs-700: 1.74rem
-  --fs-400: 1rem
+
+  --fs-xl: clamp(1.5rem, 8vw + 1rem, 4.5rem)
+  --fs-800: 2rem
+  --fs-700: 1.75rem
+  --fs-600: 1.5rem
+  --fs-500: 1.25rem
+  --fs-400: clamp(1rem, 1vw + 1rem, 1.6rem)
   --fs-300: 0.875rem
   
   --space-1: 1rem
@@ -27,14 +32,16 @@
   /* Settings */
   --display-primary: none
   --display-mobile: inherit
+    
+  /* Site header */
+  --hamburger-size: clamp(3px, 0.5vh, 6px)
+  --fs-header: clamp(var(--fs-300), 3vh, 1.6rem)
+  // --header-height-small: 1.5em
+  // --header-height-primary: 4em
   
-  --header-height-small: 1.5em
-  --header-height-primary: 4em
-  --hamburger-size: 5px
-  
-  --headline-size-small: 1.2em
-  --headline-size-medium: 1.4em
-  --headline-size-large: 3rem
+  // --headline-size-small: 1.2em
+  // --headline-size-medium: 1.4em
+  // --headline-size-large: 3rem
   
   --mobile-margin: 0.8rem
   --break-point: 50em
@@ -44,17 +51,17 @@
   --global-width-extended: min(85%, 44em)
   --padding-default: 3em
   
-  --card-size-small: 24ch
-  --card-size-medium: 21ch
-  --card-size-large: 21ch
+  // Service Card
+  --card-size-small: 20ch
+  --card-size-large: 16ch
 
   /* Dynamic Settings */
   --background: var(--clr-neutral-100)
   --background-alt: var(--clr-neutral-400)
   --svg-clr: var(--clr-neutral-800)
-  --svg-height: var(--header-height-small)
+  --svg-height: calc(var(--fs-header) * 2)
   --headline-size: var(--headline-size-small)  
   --text-color: var(--clr-neutral-800)
   --card-max-width: var(--card-size-small)
   
-$breakpoint-mobile: 43.75em
+$breakpoint-mobile: 51.75em

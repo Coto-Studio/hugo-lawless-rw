@@ -1,6 +1,6 @@
 ---
-title: "We are versatile"
-subtitle: "We can do more for you"
+title: "We are versatile <span class='sub-headline'>We can do more for you</span>"
+subtitle: ""
 name: "banner2"
 bannerImg: "bg-img-unsplash-2"
 section_type: "banner"
