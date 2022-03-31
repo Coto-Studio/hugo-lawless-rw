@@ -1,0 +1,5 @@
+{{ $logo := resources.Get "js/logo.js" }}
+
+{{ $js := slice $logo | resources.Concat "assets/js/bundle.js" }}
+<!-- Scripts -->
+<script type="application/javascript" src='{{ $js.RelPermalink }}'></script>
