@@ -7,9 +7,9 @@ alt: ""
 weight: 2
 ---
 
-- Inspections, leak/water testing and recommendations on proper material selection
-- Sealant replacement in floors, walls, facades and parking garages
-- Masonry to metal, metal to metal, and frame to glass
-- Curtain walls, Lucia bond, EIFS
+- Inspections and condition assessments
+- Leak and water tests
+- Sealant replacement in all facade substrates and parking garages
+- Curtain walls, aluminum composite panel, EIFS
+- Exterior wall expansion joints
 - Wet glazing
-- New construction

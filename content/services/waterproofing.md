@@ -7,4 +7,9 @@ fill: "top"
 weight: 3
 ---
 
-We help navigate selecting the proper waterproofing solution to ensure proper application and longevity. As approved applicators for all, we are highly skilled applicators yada yada add more here
+We help navigate selecting the appropriate waterproofing solution for your building’s environment. As approved applicators, we are committed to the proper and successful application of your waterproofing system.
+
+- Urethane coating installation and repair
+- Epoxy coating installation and repair
+- Clear penetrating sealers
+- Injections

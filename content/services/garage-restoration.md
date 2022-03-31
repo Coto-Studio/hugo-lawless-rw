@@ -7,12 +7,13 @@ alt: ""
 weight: 1
 ---
 
-Our garage restoration services include installation and replacement of expansion joints, full scale restoration and maintenance, as well as partial and full depth concrete repairs, shot blasting, grinding, coating and sealant replacement or repairs and structural concrete repair. We also install, repair and maintain
-concrete slab repair & replacement.
+Our garage restoration services include installation and replacement of expansion joints, full scale restoration and maintenance, as well as partial and full depth concrete repairs, shot blasting, grinding, coating and sealant replacement or repairs and structural concrete repair.
 
-- Vehicular & Pedestrian Traffic Coating Systems
-- Expansion Joint Systems
-- Penetrating Sealer Applications
-- Structural Beam & Column Repairs
-- Epoxy & Urethane Grout Injection
-- Precast Concrete Construction & Rehabilitation
+- Full, partial, and overhead concrete repairs
+- Vehicular & pedestrian traffic coating systems
+- Expansion joint systems
+- Penetrating sealer applications
+- Structural beam & column repairs
+- Epoxy & urethane grout injection
+- Precast concrete rehabilitation
+- Plumbing and drainage replacement and repair
