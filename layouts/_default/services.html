@@ -1,4 +1,8 @@
 {{ define "main" }}
   {{ partial "sections/services" . }}
-  {{ partial "sections/certifications" . }}
+  {{ range where site.RegularPages "Type" "homepage" }}
+    {{ if (eq .Params.section_type "certifications")  }}
+      {{ partial "sections/certifications" . }}
+    {{ end}}
+  {{ end }}
 {{ end }}

@@ -8,7 +8,7 @@
   font-weight: 700
 
 html
-  scroll-padding-top: calc(var(--headline-size) + 4em)
+  // scroll-padding-top: calc(var(--headline-size) + 4em)
   scroll-behavior: smooth
 
 body
@@ -49,7 +49,6 @@ p
 .single-colunm-extended
   width: var(--global-width-extended)
   margin-inline: auto
-  
 
 .contact
   max-width: 46em
@@ -269,15 +268,15 @@ nav
   transform: scale(1,0)
   transform-origin: top
   transition: transform 400ms ease-in-out
+  margin-right: var(--mobile-margin)
   
   ul
     margin: 0
     padding: 0
     list-style: none
   
-  li
-    margin-bottom: 0.5em
-    margin-right: var(--mobile-margin)
+  // li
+  //  margin-bottom: 0.5em
     
   a
     opacity: 0
@@ -358,7 +357,13 @@ nav
 
   nav
     all: unset
+    margin-right: var(--mobile-margin)
     a
       opacity: 1
     ul
       display: flex
+      align-content: center
+      & > * + *::before
+        content: '|'
+        margin: 0.4em
+        
