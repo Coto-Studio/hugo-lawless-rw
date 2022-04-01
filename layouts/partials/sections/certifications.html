@@ -3,7 +3,7 @@
     <h2 class="headline text-uppercase">{{.Title | safeHTML }}</h2>
   </header>
   {{ $gallery := resources.Match "images/certifications/*"  }}
-  <div class="single-colunm-extended  gallery">
+  <div class="col-large  gallery">
     {{ range $gallery }}
     <img src="{{ .Permalink }}" alt="" class="drop-shadow-400 cert-logo" >
     {{ end }}    

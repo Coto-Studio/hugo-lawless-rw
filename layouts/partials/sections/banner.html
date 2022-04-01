@@ -3,7 +3,7 @@
   <header class="banner {{with .Params.bannerImg}}{{.}}{{end}} bg-image">
     <h2 class="headline drop-shadow-800 text-uppercase">{{ .Title | safeHTML }}</h2>
   </haeder>
-  <div class="single-colunm">
+  <div class="col-normal">
     {{ .Content }}
   </div>
   {{ partial "components/button-contact-us" . }}

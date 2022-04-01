@@ -43,38 +43,36 @@ p
 .cert-logo
   max-height: 2.5em
 
-.single-colunm
-  width: var(--global-width-primary)
-  margin-inline: auto
-  
-.single-colunm-extended
-  width: var(--global-width-extended)
-  margin-inline: auto
-
 .contact
-  max-width: 46em
+  max-width: 35em
   display: flex
   flex-wrap: wrap
   justify-content: center
-  // & > *
-  //   flex: 1 1 100%
-  
-.company-info
-  width: 20em
+  & > *
+    flex: 1 1 14em
   
 .form
-  width: 20em
   display: flex
   flex-direction: column
   justify-content: flex-end
   & > *
     margin-block: 0.125em
 
-#message
-  // width: 275px
-
 .row
   align-content: end
+
+.company-info
+  > *
+    padding-block: 1rem
+    text-align: start
+    width: min(85%, 20rem)
+    margin-inline: auto
+
+.contact-us-logo
+  width: min(80%, 5rem)
+  margin-inline: auto
+  padding-top: 3rem
+
 
 /* Utility */
 .text-
@@ -125,6 +123,17 @@ p
 .span-
   &all
     column-span: all
+
+.col-
+  &normal
+    width: var(--global-width-primary)
+    margin-inline: auto
+  &large
+    width: var(--global-width-extended)
+    margin-inline: auto
+  &small
+    width: min(85%, 20em)
+    margin-inline: auto
 
 .flex-
   &100
@@ -195,16 +204,6 @@ p
   justify-content: center
   gap: var(--grid-gap)
   padding-block: 6em
-
-footer
-  display: flex
-  flex-direction: column
-  justify-content: center
-  gap: var(--grid-gap)
-  padding-top: 2em
-  > *
-    flex: 1 1 100%
-  
 
 .btn
   background: var(--background)
@@ -375,3 +374,9 @@ nav
         content: '|'
         margin: 0.4em
         
+
+// @media (prefers-color-scheme: dark)
+//   :root
+//     --clr-neutral-800: #FFFFFF
+//     --clr-neutral-400: #848482
+//     --clr-neutral-100: #010203
