@@ -12,7 +12,7 @@ address2 = "Marblehead, MA 01945"
 email = "info@lawlessrw.com"
 linkedin = "[Linked In](https://www.linkedin.com/in/steven-dowdy-62929991/)"
 copyright = "&#169; Lawless Restoration & Waterproofing LLC"
-design = "Site design <span class='cs'>[Coto.Studio 🇸🇻](https://coto.studio)</span>"
+design = "Site design by [Coto.Studio](https://coto.studio) 🇸🇻"
 
 [[themeColor]]
   schema = "light"

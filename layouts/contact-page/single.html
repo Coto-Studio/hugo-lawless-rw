@@ -6,7 +6,7 @@
       <div id="contact-us" class="bg-neutral-100 padding-block-2 text-neutral-800">
         <ul class="fa-ul company-info">
           <li><span class="fa-li"><i class="fa-solid fa-phone"></i></span>{{.Site.Params.phone }}</li>
-          <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>{{.Site.Params.email }}</li>
+          <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span><a href="mailto:{{.Site.Params.email }}">{{.Site.Params.email }}</a></li>
           <li><span class="fa-li"><i class="fa-solid fa-home"></i></span>{{.Site.Params.address1 }}<br />{{ .Site.Params.address2 }}</li>
           <li><span class="fa-li"><i class="fa-brands fa-linkedin"></i></span>{{.Site.Params.linkedin | markdownify }}</li>
         </ul>
