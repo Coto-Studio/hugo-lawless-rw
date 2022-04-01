@@ -1,3 +1,4 @@
 <footer class="bg-neutral-800 text-neutral-100 text-align-center" >
-  <p class="copyright padding-block-2">{{ .Site.Params.copyright | markdownify }} | {{ .Site.Params.design | markdownify }}</p>
+  {{ if .Params.contactButton }}{{ partial "components/button-contact-us" . }}{{ end }}
+  <p class="copyright padding-block-2">{{ .Site.Params.copyright | markdownify }}<br />{{ .Site.Params.design | markdownify }}</p>
 </footer>

@@ -2,6 +2,7 @@
 title: "About Us"
 bgImgClass: "bg-img-unsplash-1"
 name: "about-us"
+contactButton: true
 ---
 
 Lawless was founded by a team of industry experts during the pandemic in 2021. Our strong, knowledgeable leadership has been recognized and respected throughout New England for many years for specializing in waterproofing, restoration and building envelope services. Parking and property management companies, building owners, engineers, architects, and other contractors choose us for our dedication to quality, communication, and service.
@@ -12,4 +13,4 @@ We are passionate stewards of excellence and look forward to partnering with you
 
 **Steve Dowdy** is the Chief Executive Officer of Lawless Restoration & Waterproofing, LLC. He has extensive industry experience in infrastructure maintenance, repair, and restoration. He is passionate about partnering with clients in all aspects of their work and enjoys providing clear solutions for clients’ long-term goals.
 
-**Mike Smyth** is the Executive Vice President of Lawless Restoration and Waterproofing, LLC. He has many decades of industry experience in infrastructure repair, maintenance and waterproofing. Mike thrives on customer satisfaction, from job scope, to the proposal stage, to the finished product. He is a well-respected, proven and trusty partner.
+**Mike Smyth** is the Executive Vice President of Lawless Restoration and Waterproofing, LLC. He has many decades of industry experience in infrastructure repair, maintenance and waterproofing. Mike thrives on customer satisfaction, from job scope, to the proposal stage, to the finished product. He is a well-respected, proven and trusted partner.
