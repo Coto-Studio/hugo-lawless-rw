@@ -1,8 +1,8 @@
 ##
 images = ["images/lawless-logo.png"]
-description = "Restoration & Waterproofing"
-keywords = "Construction, waterproofing"
-title = 'Lawless Restoration & Waterproofing'
+description = "Lawless RW provides rehabilitative restoration and waterproofing, concrete preparation, water jetting, and facade maintenance services."
+keywords = "Construction, waterproofing, concrete preparation, water jetting, facade maintenance"
+title = "Lawless Restoration & Waterproofing"
 
 ## Theme Params
 bgImgSize = "2080x q100"
