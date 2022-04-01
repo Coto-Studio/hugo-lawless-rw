@@ -30,6 +30,7 @@ p
  font-weight: normal
  padding-block: var(--grid-gap)
 
+
 /* Composition */
 
 .gallery
@@ -195,27 +196,33 @@ p
   gap: var(--grid-gap)
   padding-block: 6em
 
+footer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: var(--grid-gap)
+  padding-top: 2em
+  > *
+    flex: 1 1 100%
+  
+
 .btn
   background: var(--background)
   border: solid 2px var(--clr-neutral-800)
-  padding: 12px 26px
+  padding: 0.5rem 1.25rem
   margin-inline: auto
   color: var(--text-color)
   text-decoration: none
   font-size: var(--fs-400)
-  @include libs.trim-font
-  @include libs.nothing
 
 .btn-alt
   background: var(--clr-neutral-400)
   border: solid 2px var(--clr-neutral-800)
-  padding: 12px 26px
+  padding: .5rem 1.25rem
   margin-inline: auto
   color: var(--clr-neutral-100)
   text-decoration: none
   font-size: var(--fs-400)
-  @include libs.trim-font
-  @include libs.nothing
 
 .section-text
   background-color: var(--pure-white)
@@ -247,7 +254,6 @@ p
   height: var(--svg-height)
   fill: var( --svg-clr)
   stroke: var( --svg-clr)
-  padding-left: var(--mobile-margin)
   #name
     display: var(--display-primary)
 
