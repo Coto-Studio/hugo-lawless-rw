@@ -5,4 +5,4 @@ name: "contact-us"
 type: "contact-page"
 ---
 
-Drop us a note or give us a call.  We would love to hear about your next project.
+Drop us a note or give us a call. We would love to hear about your next project.

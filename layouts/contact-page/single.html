@@ -1,12 +1,17 @@
 {{define "main" }}
   {{partial "body/hero" .}}
   <section class="bg-neutral-800 text-neutral-100 text-align-center padding-block-1">  
+    <div class="col-small mx-auto padding-block-1">{{.Content}}</div>
     <div class="contact mx-auto">
-      <p class="single-colunm">{{.Content}}</p>
-      <div id="contact-us" class="company-info bg-neutral-100 padding-all-1 text-neutral-800">
-        <p>Phone: <br>{{.Site.Params.phone }}</p>
-        <p>E-mail: <br>{{.Site.Params.email }}</p>
-        <p>Address: <br>{{.Site.Params.address1 }}<br>{{ .Site.Params.address2 }}</p>
+      <div id="contact-us" class="bg-neutral-100 padding-block-2 text-neutral-800">
+        <ul class="fa-ul company-info">
+          <li><span class="fa-li"><i class="fa-solid fa-phone"></i></span>{{.Site.Params.phone }}</li>
+          <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span>{{.Site.Params.email }}</li>
+          <li><span class="fa-li"><i class="fa-solid fa-home"></i></span>{{.Site.Params.address1 }}<br />{{ .Site.Params.address2 }}</li>
+          <li><span class="fa-li"><i class="fa-brands fa-linkedin"></i></span>{{.Site.Params.linkedin | markdownify }}</li>
+        </ul>
+        {{ $logo := resources.Get "images/logo/lawless.svg" }}
+        <img class="contact-us-logo"src="{{ $logo.Permalink }}" alt="Lawless RW Logo" >
       </div>
       <form action="#" class="form bg-neutral-400 padding-all-2">
         <input type="text" id="name" placeholder="Name"/>
