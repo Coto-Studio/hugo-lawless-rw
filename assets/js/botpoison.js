@@ -2,6 +2,8 @@
 (function () {
   // Vars.
   var $form = document.getElementsByTagName("form")[0];
+  if (!$form) return;
+
   var $submit = $form.querySelector('button[type="submit"]'),
     $message;
 
