@@ -38,6 +38,7 @@
 
     // Disable submit.
     $submit.disabled = true;
+    $message._show("info", "Powerwashing the spam bots! (Processing request)");
 
     // Process form.
     // Note: Doesn't actually do anything yet (other than report back with a "thank you"),
@@ -60,11 +61,7 @@
       // Get Botpoison solution
       const { solution } = await botpoison.challenge({
         onProgress: (progress) => {
-          if (progress === 0.5) {
-            console.log("Halfway there");
-          } else if (progress === 1) {
-            console.log("Finished");
-          }
+          if (progress === 1) return $message._hide();
         },
       });
       data["_botpoison"] = solution;

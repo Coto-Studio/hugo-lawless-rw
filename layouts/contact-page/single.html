@@ -14,11 +14,11 @@
         <img class="contact-us-logo"src="{{ $logo.Permalink }}" alt="Lawless RW Logo" >
       </div>
       <form action="https://submit-form.com/dKhIvRYj" data-botpoison-public-key="pk_b04918a3-ab4c-4523-9c2b-50de5a6ed4bf" class="form bg-neutral-400 padding-all-2">
-        <input type="text" id="name" name="name" placeholder="Name"/>
+        <input type="text" id="name" name="name" placeholder="Name*" required/>
+        <input type="email" id="email" name="email"  placeholder="E-Mail*" required/>
         <input type="text" id="company" name="compay" placeholder="Company"/>
-        <input type="email" id="email" name="email"  placeholder="E-Mail"/>
         <input type="text" id="phone" name="phone" placeholder="Phone"/>
-        <textarea type="text" name="message" id="message" rows="6" placeholder="Message"></textarea>
+        <textarea type="text" name="message" id="message" rows="6" placeholder="Message*" required></textarea>
         <button type="submit">Submit</button>
       </form>
   </section>
