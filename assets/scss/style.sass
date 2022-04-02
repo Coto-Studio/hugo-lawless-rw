@@ -34,6 +34,9 @@ a
   text-decoration: none
   border-bottom: 2px solid var(--text-color)
   color: var(--text-color)
+  &:hover
+    color: var(--text-color-alt)
+    border-bottom: 3px solid var(--text-color-alt)
 
 svg
   overflow-y: clip
@@ -233,6 +236,7 @@ svg
   &:hover
     background-color: var(--clr-neutral-400)
     color: var(--clr-neutral-100)
+    border: solid 2px var(--clr-neutral-100)
 
 .btn-alt
   background: var(--clr-neutral-400)
@@ -244,6 +248,7 @@ svg
   font-size: var(--fs-400)
   &:hover
     background-color: var(--clr-neutral-100)
+    border: solid 2px var(--clr-neutral-800)
     color: var(--clr-neutral-800)
 
 .section-text
@@ -314,8 +319,6 @@ nav
     opacity: 0
     border-bottom: none
     transition: opacity 150ms ease-in-out
-    &:hover
-      border-top: 3px solid var(--text-color-alt)
   
 .nav-toggle
   display: none
