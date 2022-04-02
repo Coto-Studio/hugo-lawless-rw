@@ -1,0 +1,7 @@
+{{ $resourceIMG := .Page.Resources.GetMatch (.Get "name") }}
+{{ $profileIMG := $resourceIMG.Resize "800x r270" }}
+{{ $profileIMG = $profileIMG.Crop "800x800 top"}}
+<div class="content-img padding-block-1 {{ .Get "class" }}">
+  <img class="portait" src="{{ $profileIMG.Permalink }}" alt="{{ $profileIMG.Params.alt}}">
+  {{ .Inner }}
+</div>

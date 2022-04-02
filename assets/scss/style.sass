@@ -73,6 +73,14 @@ p
   margin-inline: auto
   padding-top: 3rem
 
+.content-img
+  display: flex
+  flex-direction: column
+  .portait
+    width: min(100%, 350px)
+    height: auto
+    margin-inline: auto
+    border-radius: var(--border-radius)
 
 /* Utility */
 .text-
@@ -353,14 +361,27 @@ nav
 .push-end
   margin-top: 1em
 
+
 /* MEDIA */
- 
 @media screen and (min-width: libs.$breakpoint-mobile)
   :root
     --display-primary: block
     --display-mobile: none
     --card-max-width: var(--card-size-large)
     --svg-height: calc(var(--fs-header) * 2.4)
+  
+  .content-img
+    flex-direction: row
+    gap: 1em    
+
+    .portait
+        width: auto
+        height: 300px
+        margin-block: 1em
+        border-radius: var(--border-radius)
+  
+  .flex-reverse
+    flex-direction: row-reverse
 
   .header
     p
