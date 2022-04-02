@@ -10,8 +10,12 @@
           <a href="{{.Permalink}}" class="text-neutral-100">
             {{ $banner := resources.GetMatch .Params.banner}}
             {{ if $banner }}
-              {{ $banner := $banner.Fill (printf "1080x600 %s" .Params.fill) }}
-              <img src="{{$banner.Permalink}}" alt="{{with .Params.alt}}{{.}}{{else}}{{.Title}}{{end}}">
+              {{ $small := $banner.Fill (printf "540x300 %s" .Params.fill) }}
+              {{ $medium := $banner.Fill (printf "1080x600 %s" .Params.fill) }}
+              {{ $large := $banner.Fill (printf "2160x1200 %s" .Params.fill) }}
+              <img src="{{$medium.Permalink}}" 
+                   srcset="{{$small.Permalink}} 540w, {{$medium.Permalink}} 1080w, {{$large.Permalink}} 2160w"
+                   alt="{{with .Params.alt}}{{.}}{{else}}{{.Title}}{{end}}">
             {{ end }}
           </a>
           <h3>{{ .Title }}</h3>
