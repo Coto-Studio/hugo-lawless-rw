@@ -14,7 +14,7 @@
                 {{ $data.Set "url" . }}
               {{ end }}
             {{ end }}
-            {{ $banner := resources.Get ($data.Get "url")}}            
+            {{ $banner := resources.Get ($data.Get "url") }}            
             {{ $small := $banner.Fill (printf "540x300 %s" .Params.fill) }}
             {{ $medium := $banner.Fill (printf "1080x600 %s" .Params.fill) }}
             {{ $large := $banner.Fill (printf "2160x1200 %s" .Params.fill) }}
