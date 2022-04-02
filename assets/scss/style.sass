@@ -30,6 +30,10 @@ p
  font-weight: normal
  padding-block: var(--grid-gap)
 
+a
+  text-decoration: none
+  border-bottom: 2px solid var(--text-color)
+  color: var(--text-color)
 
 /* Composition */
 
@@ -200,9 +204,7 @@ p
   font-size: var(--fs-300)
   a
     color: var(--clr-neutral-100)
-    text-decoration-color: blue
-    text-decoration-style: solid
-    text-decoration-thickness: 2px
+    border-bottom: 2px solid blue
 
 /* Block */
 .banner
@@ -225,6 +227,9 @@ p
   color: var(--text-color)
   text-decoration: none
   font-size: var(--fs-400)
+  &:hover
+    background-color: var(--clr-neutral-400)
+    color: var(--clr-neutral-100)
 
 .btn-alt
   background: var(--clr-neutral-400)
@@ -234,6 +239,9 @@ p
   color: var(--clr-neutral-100)
   text-decoration: none
   font-size: var(--fs-400)
+  &:hover
+    background-color: var(--clr-neutral-100)
+    color: var(--clr-neutral-800)
 
 .section-text
   background-color: var(--pure-white)
@@ -298,10 +306,10 @@ nav
     
   a
     opacity: 0
-    text-decoration: none
+    border-bottom: none
     transition: opacity 150ms ease-in-out
     &:hover
-      color: var(--accent)
+      border-top: 3px solid var(--text-color-alt)
   
 .nav-toggle
   display: none
