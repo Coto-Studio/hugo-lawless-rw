@@ -1,16 +1,17 @@
 <header class="site-header drop-shadow-400 sticky">
   <div id="logo-container">
-    <a href="/">
+    <a id="logo-link" href="{{ .Site.BaseURL }}">
       {{ $logo := resources.Get "images/logo/lawless.svg" }}
       {{ $logo.Content | safeHTML }}
     </a>
   </div>
-  <div class="mobile-header-name text-uppercase">Lawless</div>
+
+  <div class="mobile-header-name text-uppercase"><a href="{{ .Site.BaseURL }}">Lawless</a></div>
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <nav class="navbar">
     <ul>
       {{ range .Site.Menus.main }}
-        <li><a class="text-neutral-800" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+        <li><a class="text-neutral-800 menu-link" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
       {{ end }}
     </ul>
   </nav>

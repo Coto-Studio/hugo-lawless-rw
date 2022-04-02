@@ -35,6 +35,9 @@ a
   border-bottom: 2px solid var(--text-color)
   color: var(--text-color)
 
+svg
+  overflow-y: clip
+
 /* Composition */
 
 .gallery
@@ -270,6 +273,7 @@ a
 
 .logo
   width: auto
+  overflow-y: clip
   height: var(--svg-height)
   fill: var( --svg-clr)
   stroke: var( --svg-clr)
@@ -282,6 +286,8 @@ a
   line-height: 1
   @include libs.trim-font
   @include libs.nothing
+  a
+    border-bottom: none
 
 
 nav
