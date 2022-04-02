@@ -8,8 +8,14 @@
 {{ define "main" }}
   <article id="{{ .Params.name }}" class="bg-neutral-100" aria-labelledby="company-name">
     {{ partial "body/hero" . }}
-    <section class="col-normal padding-block-default">
-      {{ .Content }}
+    <section class="service-section padding-all-2">
+      {{ with .Params.images}}
+        {{ range after 1 . }}
+        {{ $img := resources.Get .}}
+        <img class="border-radius" src="{{ $img.Permalink }}" alt="">
+        {{ end }}
+      {{ end }}
+      <div class="content">{{ .Content }}</div>
     </section>
   </article>
 {{ end }}

@@ -372,8 +372,21 @@ nav
       width: 95%
       margin-inline: auto
       min-height: 7.25rem
-  // button
-  //   border: none
+
+.service-section
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  flex-direction: row
+  gap: 1em
+  > *
+    flex: 1 1 15em
+  img
+    max-width: 12em
+    height: 100%
+    margin-block: 1em
+  .content
+    max-width: var(--global-width-primary)
 
 .push-end
   margin-top: 1em

@@ -5,6 +5,9 @@ bgImgClass: "bg-img-custom"
 fill: "center"
 alt: ""
 weight: 1
+images:
+  - "images/services/IMG_4999.jpg"
+  - "images/services/water_jet_power1.jpeg"
 ---
 
 Our garage restoration services include installation and replacement of expansion joints, full scale restoration and maintenance, as well as partial and full depth concrete repairs, shot blasting, grinding, coating and sealant replacement or repairs and structural concrete repair.
