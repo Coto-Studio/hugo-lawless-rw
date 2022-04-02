@@ -7,6 +7,8 @@ alt: ""
 weight: 2
 ---
 
+It is recommended to replace the caulking and sealants on your parking garage or building approximately every 10 years. According to manufacturers, most sealants have a life expectancy of 10 years. UV light will degrade the sealants along with other variables to the point of failures, leading to water intrusion, and this can be damaging to concrete and structural steel components. If you own or manage a property and see failed caulking, give us a call and we will provide a proposal that includes recommendations along with pricing you can use to budget for repairs.
+
 - Inspections and condition assessments
 - Leak and water tests
 - Sealant replacement in all facade substrates and parking garages

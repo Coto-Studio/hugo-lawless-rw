@@ -2,7 +2,6 @@
 title: "About Us"
 bgImgClass: "bg-img-unsplash-1"
 name: "about-us"
-contactButton: true
 resources:
   - name: Steve
     src: images/whoops.jpg

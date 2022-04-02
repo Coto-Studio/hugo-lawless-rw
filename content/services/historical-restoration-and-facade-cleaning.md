@@ -12,6 +12,7 @@ We value and appreciate beautiful and historic architecture and we take great pr
 - Facade washing and maintenance
 - Test panels
 - Graffiti removal
+- Efflorescence removal
 - Soda, dry ice and sand blasting
 - Repointing and tuckpointing
 - Sealants

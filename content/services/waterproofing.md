@@ -7,9 +7,10 @@ fill: "top"
 weight: 3
 ---
 
-We help navigate selecting the appropriate waterproofing solution for your building’s environment. As approved applicators, we are committed to the proper and successful application of your waterproofing system.
+As approved applicators, we help navigate selecting the appropriate waterproofing solution for your building’s environment. These robust systems are designed to protect sections of your building that are exposed to harsh elements and high foot or vehicle traffic. Selecting and maintaining these systems should be done with the help of a professional waterproofing contractor. We have the experience that you are looking for.
 
-- Urethane coating installation and repair
-- Epoxy coating installation and repair
+- Vehicular traffic coating installation and repair
+- Pedestrian traffic coating installation and repair
+- Balcony coating installation and repairs
 - Clear penetrating sealers
-- Injections
+- Foundation waterproofing systems
