@@ -11,7 +11,7 @@
   --fw-400: 400;
   --fw-700: 700;
   --fw-900: 900;
-  --fs-xl: clamp(1.5rem, 8vw + 1rem, 4.5rem);
+  --fs-xl: clamp(1.5rem, 8vw + 0.4rem, 4.5rem);
   --fs-800: 2rem;
   --fs-700: 1.75rem;
   --fs-600: 1.5rem;
@@ -251,7 +251,7 @@ svg {
   font-size: var(--fs-xl);
   font-weight: var(--fw-700);
   line-height: 1;
-  width: 98%;
+  width: min(98%, 20ch);
   margin-inline: auto;
 }
 

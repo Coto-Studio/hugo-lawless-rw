@@ -1,5 +1,5 @@
 ---
-title: "Waterproofing and Traffic Coating"
+title: "Water&shy;proofing and Traffic Coating"
 bgImgClass: "bg-img-custom"
 banner: "images/services/wp page.jpeg"
 alt: "Building with siding missing"

@@ -8,17 +8,21 @@
       <article class="service-card border-radius bg-neutral-100 ">
         <header class="text-neutral-800 text-align-center" >
           <a href="{{.Permalink}}" class="text-neutral-100">
-            {{ $banner := resources.GetMatch .Params.banner}}
-            {{ if $banner }}
-              {{ $small := $banner.Fill (printf "540x300 %s" .Params.fill) }}
-              {{ $medium := $banner.Fill (printf "1080x600 %s" .Params.fill) }}
-              {{ $large := $banner.Fill (printf "2160x1200 %s" .Params.fill) }}
-              <img src="{{$medium.Permalink}}" 
-                   srcset="{{$small.Permalink}} 540w, {{$medium.Permalink}} 1080w, {{$large.Permalink}} 2160w"
-                   alt="{{with .Params.alt}}{{.}}{{else}}{{.Title}}{{end}}">
+            {{ $data := newScratch }}    
+            {{ with .Params.images }}
+              {{ range first 1 . }}
+                {{ $data.Set "url" . }}
+              {{ end }}
             {{ end }}
+            {{ $banner := resources.Get ($data.Get "url")}}            
+            {{ $small := $banner.Fill (printf "540x300 %s" .Params.fill) }}
+            {{ $medium := $banner.Fill (printf "1080x600 %s" .Params.fill) }}
+            {{ $large := $banner.Fill (printf "2160x1200 %s" .Params.fill) }}
+            <img src="{{$medium.Permalink}}" 
+                 srcset="{{$small.Permalink}} 540w, {{$medium.Permalink}} 1080w, {{$large.Permalink}} 2160w"
+                 alt="{{with $.Page.Params.alt}}{{.}}{{else}}{{$.Page.Title}}{{end}}">
           </a>
-          <h3>{{ .Title }}</h3>
+          <h3>{{ .Title | safeHTML }}</h3>
         </header>
         <a class="border-radius margin-auto btn-alt" href="{{.Permalink}}">Learn More</a>
       </article>
