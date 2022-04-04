@@ -15,6 +15,6 @@ We value and appreciate beautiful and historic architecture and we take great pr
 - Test panels
 - Graffiti removal
 - Efflorescence removal
-- Soda, dry ice and sand blasting
+- Soda, dry ice and sandblasting
 - Repointing and tuckpointing
 - Sealants

@@ -1,0 +1,17 @@
+{{ $resourceIMG := .Page.Resources.GetMatch (.Get "name") }}
+{{ $small := $resourceIMG.Resize "500x r270 q100" }}
+{{ $small = $small.Crop "500x500 top"}}
+
+{{ $medium := $resourceIMG.Resize "1000x r270 q100" }}
+{{ $medium = $medium.Crop "1000x1000 top"}}
+
+{{ $large := $resourceIMG.Resize "1500x r270 q100" }}
+{{ $large = $large.Crop "1500x1500 top"}}
+<div class="content-img padding-block-1 {{ .Get "class" }}">
+  <img  class="portait" 
+        src="{{ $medium.Permalink }}" 
+        srcset="{{ $small.Permalink }} 500, {{ $medium.Permalink }} 1000, {{ $large.Permalink }} 1500"
+        sizes="(min-width: 51.75em) 300px, 350px"
+        alt="{{ $resourceIMG.Params.alt}}">
+  {{ .Inner }}
+</div>

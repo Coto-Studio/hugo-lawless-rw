@@ -14,7 +14,7 @@
 {{ define "main" }}
   <article id="{{ .Params.name }}" class="bg-standard" aria-labelledby="company-name">
     {{ partial "body/hero" . }}
-    <section class="service-section padding-all-2">
+    <section class="padding-all-2">
       {{ with .Params.images}}
         {{ range after 1 . }}
         {{ $img := resources.Get .}}

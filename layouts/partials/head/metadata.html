@@ -1,9 +1,9 @@
 <!-- Basic Meta Data -->
-<title>{{ .Site.Params.Title }}{{if .IsPage}} &middot; {{ .Title }}{{ end }}</title>
+<meta charset="utf-8" />
 <meta name="description" content="{{ if .Description }}{{ .Description }}{{else}}{{ .Site.Params.Description}}{{end}}" />
 <meta name="keywords" content="{{ if .Keywords }}{{ .Keywords }}{{else}}{{ .Site.Params.Keywords}}{{end}}">
-<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>{{ .Site.Params.Title }}{{if .IsPage}} &middot; {{ .Title }}{{ end }}</title>
 
 <!-- Open Graph Daimages/faviconta -->
 {{ template "_internal/opengraph.html" . }}
