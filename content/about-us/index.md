@@ -1,6 +1,6 @@
 ---
 title: "About Us"
-bgImgClass: "bg-img-unsplash-1"
+bgImgClass: "bg-img-unsplash-2"
 name: "about-us"
 resources:
   - name: Steve

@@ -2,7 +2,7 @@
 title: "We are versatile <span class='sub-headline'>We can do more for you</span>"
 subtitle: ""
 name: "banner2"
-bannerImg: "bg-img-unsplash-2"
+bannerImg: "bg-img-unsplash-5"
 section_type: "banner"
 weight: 6
 ---

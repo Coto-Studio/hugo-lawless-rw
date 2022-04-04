@@ -1,12 +1,12 @@
 <!-- Section: Services -->
-<section id="services" class="bg-neutral-400 text-neutral-100 bg-img-unsplash-3 padding-block-default">
+<section id="services" class="text-neutral-100 bg-img-unsplash-6 padding-block-default" {{ with .Params.ariaLabeledBy }} aria-labelledby="{{.}}"{{ end }} {{ with .Params.ariaLabel }} aria-label="{{.}}"{{ end }}>
   <header>
     <h2 class="headline text-uppercase flex-100 text-align-center drop-shadow-800">Services</h2>
   </header>
   <div class="services col-large">
     {{ range where site.RegularPages "Type" "services" }}
-      <article class="service-card border-radius bg-neutral-100 ">
-        <header class="text-neutral-800 text-align-center" >
+      <article class="service-card border-radius bg-standard">
+        <header class="text-align-center" >
           <a href="{{.Permalink}}" class="text-neutral-100">
             {{ $data := newScratch }}    
             {{ with .Params.images }}

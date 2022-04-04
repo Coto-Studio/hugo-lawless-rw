@@ -1,18 +1,15 @@
 ---
 title: "Other Services"
-bgImgClass: "bg-img-custom"
+bgImgClass: "bg-img-unsplash-3"
 fill: ""
 alt: ""
 weight: 6
 images:
-  - "images/services/IMG_3786.jpg"
+  - "images/unsplash/krakenimages-Y5bvRlcCx8k-unsplash.jpg"
 ---
 
 Our expanded service lines with our trade partners allows us to offer specialty services without the headache. We are delighted and honored to collaborate with some of the industry’s best and we love sharing and promoting our trusted partners. Please contact us so we can help you with your “other” projects.
 
-- Shoring
-- Make safe repairs
-- Facade and garage maintenance programs
 - Commercial snow and ice management
 - Commercial landscaping
 - Site work and excavation

@@ -1,6 +1,6 @@
-<header class="bg-neutral-400 text-align-center padding-block-1" >
+<header class="bg-neutral-400 text-align-center padding-block-1" {{ with .Params.ariaLabeledBy }} aria-labelledby="{{.}}"{{ end }} {{ with .Params.ariaLabel }} aria-label="{{.}}"{{ end }}>
   <div class="banner bg-image {{with .Params.bgImgClass}}{{.}}{{end}}">
-    <h1 class="headline drop-shadow-800 text-uppercase">{{with .Params.displayTitle }}{{ . | safeHTML}}{{else}}{{ .Title | safeHTML }}{{end}}</h1>
+    <h1 class="headline drop-shadow-800 text-uppercase" {{ with .Params.ariaLabeledBy }} id="{{.}}"{{ end }}>{{with .Params.displayTitle }}{{ . | safeHTML}}{{else}}{{ .Title | safeHTML }}{{end}}</h1>
     {{ if .IsHome }}
     {{ partial "components/button-contact-us" . }}
     {{ end }}

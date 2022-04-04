@@ -1,7 +1,7 @@
 <!-- Section: {{ .Params.name }} -->
-<section id="{{ .Params.name }}" class="bg-neutral-400 text-align-center padding-block-1 " aria-labelledby="company-name">
+<section id="{{ .Params.name }}" class="bg-neutral-400 text-align-center padding-block-1 " {{ with .Params.ariaLabeledBy }} aria-labelledby="{{.}}"{{ end }} {{ with .Params.ariaLabel }} aria-label="{{.}}"{{ end }}>
   <header class="banner {{with .Params.bannerImg}}{{.}}{{end}} bg-image">
-    <h2 class="headline drop-shadow-800 text-uppercase">{{ .Title | safeHTML }}</h2>
+    <h2 class="headline drop-shadow-800 text-uppercase" {{ with .Params.ariaLabeledBy }} id="{{.}}"{{ end }}>{{ .Title | safeHTML }}</h2>
   </haeder>
   <div class="col-normal">
     {{ .Content }}

@@ -1,6 +1,6 @@
-<section id="certifications" class="padding-block-default">
+<section id="certifications" class="bg-mixed padding-block-default" {{ with .Params.ariaLabeledBy }} aria-labelledby="{{.}}"{{ end }} {{ with .Params.ariaLabel }} aria-label="{{.}}"{{ end }}>
   <header class="text-align-center padding-block-1">
-    <h2 class="headline text-uppercase">{{.Title | safeHTML }}</h2>
+    <h2 {{ with .Params.ariaLabeledBy }} id="{{.}}"{{ end }} class="headline text-uppercase">{{.Title | safeHTML }}</h2>
   </header>
   {{ $gallery := resources.Match "images/certifications/*"  }}
   <div class="col-large  gallery">

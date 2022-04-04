@@ -1,6 +1,6 @@
 ---
 title: "Contact Us"
-bgImgClass: "bg-img-unsplash-0"
+bgImgClass: "bg-img-unsplash-4"
 name: "contact-us"
 type: "contact-page"
 disableContactButton: true

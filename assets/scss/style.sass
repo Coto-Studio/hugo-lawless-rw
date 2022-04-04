@@ -116,6 +116,12 @@ svg
     background-color: var(--clr-neutral-400)
   &neutral-800
     background-color: var(--clr-neutral-800)
+  &mixed
+    background: var(--background-mixed)
+    color: var(--text-color)
+  &standard
+    background: var(--background)
+    color: var(--text-color)
   &image
     background-color: rgba(0,0,0,.3)
     background-blend-mode: multiply
@@ -218,7 +224,7 @@ svg
   background-size: cover  
   background-position: center center 
   min-height: 250px
-  color: var(--pure-white)
+  color: var(--clr-neutral-100)
   display: flex
   flex-direction: column
   justify-content: center
@@ -227,7 +233,7 @@ svg
 
 .btn
   background: var(--background)
-  border: solid 2px var(--clr-neutral-800)
+  border: solid 2px var(--text-color)
   padding: 0.5rem 1.25rem
   margin-inline: auto
   color: var(--text-color)
@@ -239,11 +245,11 @@ svg
     border: solid 2px var(--clr-neutral-100)
 
 .btn-alt
-  background: var(--clr-neutral-400)
-  border: solid 2px var(--clr-neutral-800)
+  background: var(--background-alt)
+  border: solid 2px var(--text-color)
   padding: .5rem 1.25rem
   margin-inline: auto
-  color: var(--clr-neutral-100)
+  color: var(--text-color)
   text-decoration: none
   font-size: var(--fs-400)
   &:hover
@@ -316,6 +322,7 @@ nav
   //  margin-bottom: 0.5em
     
   a
+    color: var(--text-color)
     opacity: 0
     border-bottom: none
     transition: opacity 150ms ease-in-out
@@ -430,8 +437,9 @@ nav
         margin: 0.4em
         
 
-// @media (prefers-color-scheme: dark)
-//   :root
-//     --clr-neutral-800: #FFFFFF
-//     --clr-neutral-400: #848482
-//     --clr-neutral-100: #010203
+@media (prefers-color-scheme: dark)
+  :root
+    --svg-clr: var(--clr-neutral-100)
+    --text-color: var(--clr-neutral-100)
+    --background: var(--clr-neutral-800)
+    --background-mixed: var(--clr-neutral-400)

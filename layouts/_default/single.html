@@ -12,7 +12,7 @@
   {{ end }}
 {{ end }}
 {{ define "main" }}
-  <article id="{{ .Params.name }}" class="bg-neutral-100" aria-labelledby="company-name">
+  <article id="{{ .Params.name }}" class="bg-standard" aria-labelledby="company-name">
     {{ partial "body/hero" . }}
     <section class="service-section padding-all-2">
       {{ with .Params.images}}

@@ -1,6 +1,6 @@
 ---
 title: "Approved <span class='sub-headline'>Applicators & Certifications</span>"
-name: "applicators"
+ariaLabel: "Approved Applicators and Certifications"
 section_type: "certifications"
 weight: 5
 ---
