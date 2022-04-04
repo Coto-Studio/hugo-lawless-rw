@@ -1,10 +1,11 @@
 ---
 title: "Garage Restoration"
 banner: "images/services/IMG_4999.jpg"
-bgImgClass: "bg-img-custom"
-fill: "center"
+class: "service-section"
 alt: ""
 weight: 1
+bgImgClass: "bg-img-custom"
+fill: "center"
 images:
   - "images/services/IMG_4999.jpg"
   - "images/services/water_jet_power1.jpeg"

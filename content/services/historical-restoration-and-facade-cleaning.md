@@ -1,5 +1,5 @@
 ---
-title: "Historical Restoration and Facade Cleaning"
+title: "Historical Restoration and Façade Cleaning"
 bgImgClass: "bg-img-unsplash-1"
 fill: ""
 alt: ""
@@ -9,9 +9,9 @@ images:
   - "images/services/IMG_3787.jpg"
 ---
 
-We value and appreciate beautiful and historic architecture and we take great pride in our trusted, tested and proven process, material selection and consultation with leading industry experts when selecting the proper solution. We frequently work with recognized architectural consultants in addition to providing our own in-house consulting.
+We value and appreciate beautiful and historic architecture. We therefore take great pride in our trusted, tested and proven process, material selection, and consultation with leading industry experts when selecting the proper solution. We frequently work with recognized architectural consultants in addition to providing our own in-house consulting.
 
-- Facade washing and maintenance
+- Façade washing and maintenance
 - Test panels
 - Graffiti removal
 - Efflorescence removal

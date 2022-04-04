@@ -1,10 +1,10 @@
 ---
 title: "Caulking and Sealants"
+weight: 2
 banner: "images/services/IMG_8261.jpg"
 bgImgClass: "bg-img-custom"
+class: "service-section"
 fill: "center"
-alt: ""
-weight: 2
 images:
   - "images/services/IMG_8261.jpg"
   - "images/services/caulking failed.jpeg"

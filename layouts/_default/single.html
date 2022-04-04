@@ -14,11 +14,11 @@
 {{ define "main" }}
   <article id="{{ .Params.name }}" class="bg-standard" aria-labelledby="company-name">
     {{ partial "body/hero" . }}
-    <section class="padding-all-2">
+    <section class="single-page padding-all-2">
       {{ with .Params.images}}
         {{ range after 1 . }}
         {{ $img := resources.Get .}}
-        <img class="border-radius" src="{{ $img.Permalink }}" alt="">
+        <img class="border-radius service-image" src="{{ $img.Permalink }}" alt="">
         {{ end }}
       {{ end }}
       <div class="content">{{ .Content }}</div>
