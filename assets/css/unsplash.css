@@ -1,10 +1,10 @@
-{{ $images := resources.Match "images/unsplash/*" }}
+{{ $images := resources.Match "images/unsplash/*.*p*" }}
 
 {{ range $elem_index, $img := $images }}
-{{ $img := $img.Resize $.Site.Params.bgImgSize }}
-{{ printf ".bg-img-unsplash-%s" (string $elem_index) }}{
- background-image: url({{ $img.Permalink }});
-}
+  {{ $img := $img.Resize $.Site.Params.bgImgSize }}
+  {{ printf ".bg-img-unsplash-%s" (string $elem_index) }}{
+   background-image: url({{ $img.Permalink }});
+  }
 {{ end }}
 
 .bg-img-custom{
