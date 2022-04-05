@@ -1,6 +1,6 @@
 ---
 title: "Services"
-name: "services"
+ariaLabel: "Services"
 section_type: "services"
 weight: 3
 ---
