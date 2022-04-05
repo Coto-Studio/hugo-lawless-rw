@@ -1,0 +1,24 @@
+@mixin nothing
+
+@mixin nav-selector
+  display: block
+  background: var(--text-color)
+  height: var(--hamburger-size)
+  width: calc(var(--hamburger-size) * 7)
+  border-radius: 2px
+  position: relative
+
+@mixin span-selector
+  @include nav-selector
+  @include nothing
+  content: ''
+
+@mixin trim-font
+  &::before
+    content: ""
+    margin-bottom: -0.0745em
+    display: table
+  &::after
+    content: ""
+    margin-top: -0.2765em
+    display: table

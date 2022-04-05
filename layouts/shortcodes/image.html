@@ -1,0 +1,2 @@
+{{ $resourceIMG := .Page.Resources.GetMatch (.Get "name") }}
+{{ partial "components/image" (dict "Image" $resourceIMG "alt" $resourceIMG.Params.alt "Class" $resourceIMG.Params.Class) }}

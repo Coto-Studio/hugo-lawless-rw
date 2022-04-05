@@ -1,91 +1,318 @@
-@use 'mixins'
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap")
-
-:root
-  --border-red:  red solid 2px
-  --battleship-gray: #848482
-  --rich-black: #010203
-  --pure-white: #FFFFFF
-  
-  --text-color: var(--rich-black)
-  --background: var(--pure-white)
-  --background-alt: var(--battleship-gray)
-  --ff-primary: Roboto, Helvetica, sans-serif
-  --ff-display: "Josefin Sans", serif
-  
-  
-  --mobile-margin: 0.8rem
-  --break-point: 50em
-  --span-height: 6px
-  --grid-gap: 1rem
-  
-  --display-primary: none
-  --display-mobile: inherit
-  
+@use 'libs'
 
 :is(body, input, select, textarea)
   font-family: var(--ff-primary)
-  font-size: 16pt
-  font-weight: 400
-  line-height: 1.625
   color: var(--text-color)
+  font-size: var(--fs-400)
+  line-height: 1.625
+  font-weight: 700
+
+:is(input, textarea)
+  color: var(--clr-neutral-400)
+
+html
+  // scroll-padding-top: calc(var(--headline-size) + 4em)
+  scroll-behavior: smooth
 
 body
-  background-color: var(--background)
-  display: grid
-  grid-template-rows: auto 1fr auto
-  min-height: 100vh
+  background-color: var(--background)  
+  height: fit-content
+  max-width: 100em
+  margin-inline: auto
 
 h1,
 h2
   padding-block: var(--grid-gap)
+
+h3
+  padding-block: var(--grid-gap)
+  line-height: 1.2
+  font-size: var(--fs-600)
   
 p
  font-weight: normal
- padding: var(--grid-gap)
+ padding-block: var(--grid-gap)
 
+a
+  text-decoration: none
+  border-bottom: 2px solid var(--text-color)
+  color: var(--text-color)
+  &:hover
+    color: var(--text-color-alt)
+    border-bottom: 3px solid var(--text-color-alt)
 
-/* UTILITY CLASSES */
-.uppercase
-  text-transform: uppercase
+/* Composition */
+
+.gallery
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-evenly
+  gap: 1em
+  margin-inline: auto
+
+.cert-logo
+  max-height: 2.5em
+
+.contact
+  max-width: 35em
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  & > *
+    flex: 1 1 14em
+  
+.form
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  & > *
+    margin-block: 0.125em
+
+.row
+  align-content: end
+
+.company-info
+  > *
+    padding-block: 1rem
+    text-align: start
+    width: min(85%, 20rem)
+    margin-inline: auto
+
+.contact-us-logo
+  width: min(80%, 6rem)
+  margin-inline: auto
+  padding-top: 3rem
+
+.content-img
+  display: flex
+  flex-direction: column
+  .portait
+    width: min(100%, 350px)
+    height: auto
+    margin-inline: auto
+    border-radius: var(--border-radius)
+
+.team
+  width: min(80%,20em)
+  margin-inline: auto
+
+/* Utility */
+.text-
+  &neutral-100
+    color: var(--clr-neutral-100)
+  &neutral-400
+    color: var(--clr-neutral-400)
+  &neutral-800
+    color: var(--clr-neutral-800)
+  &align-center
+    text-align: center
+  &uppercase
+    text-transform: uppercase
+  &captialize
+    text-transform: lowercase
+  &font-primary
+    font-family: var(--ff-primary)
+
+.bg-
+  &neutral-100
+    background-color: var(--clr-neutral-100)
+  &neutral-400
+    background-color: var(--clr-neutral-400)
+  &neutral-800
+    background-color: var(--clr-neutral-800)
+  &mixed
+    background: var(--background-mixed)
+    color: var(--text-color)
+  &standard
+    background: var(--background)
+    color: var(--text-color)
+  &image
+    background-color: rgba(0,0,0,.3)
+    background-blend-mode: multiply
+
+.padding-
+  &block-1
+    padding-block: 1em
+  &block-2
+    padding-block: 2em
+  &block-3
+    padding-block: 3em
+  &block-default
+    padding-block: var(--padding-default)
+  &top-1
+    padding-top: 1em
+  &top-2
+    padding-top: 2em
+  &top-3
+    padding-top: 3em
+  &all-1
+    padding: 1em
+  &all-2
+    padding: 2em
+  &all-3
+    padding: 3em
+
+.margin-
+  &block-1
+    margin-block: 1em
+  &block-2
+    margin-block: 2em
+  &block-3
+    margin-block: 3em
+
+.span-
+  &all
+    column-span: all
+
+.col-
+  &normal
+    width: var(--global-width-primary)
+    margin-inline: auto
+  &large
+    width: var(--global-width-extended)
+    margin-inline: auto
+  &small
+    width: min(85%, 20em)
+    margin-inline: auto
+
+.flex-
+  &100
+    flex: 1 1 100%
 
 .headline
   font-family: var(--ff-display)
-  font-size: 4rem
-  font-weight: 900
+  font-size: var(--fs-xl)
+  font-weight: var(--fw-700)
   line-height: 1
+  width: min(98%, 20ch)
+  margin-inline: auto
+
+.sub-headline
+  font-family: var(--ff-primary)
+  font-size: var(--fs-600)
+  font-weight: var(--fw-400)
+  display: table
+  margin-inline: auto
+
+.drop-shadow
+  &-400
+    filter: drop-shadow(2px 2px 5px var(--clr-neutral-400))
+  &-800
+    filter: drop-shadow(2px 2px 5px var(--clr-neutral-800))
+  // box-shadow: 2px 2px 5px var(--clr-neutral-800)
   
-  
-/* HEADER CONTENT */
-.header 
+.sticky
+  position: sticky
+  top: 0
+  will-change: transform
+
+.debug
+  border: 4px solid red
+  * > *
+    outline: 1px solid red
+
+.border-radius
+  border-radius: var(--border-radius)
+
+.margin-auto
+  margin: auto
+
+.mx-auto
+  margin-inline: auto
+
+.display-
+  &none
+    display: none
+
+.copyright
+  font-size: var(--fs-300)
+  a
+    color: var(--clr-neutral-100)
+    border-bottom: 2px solid blue
+
+/* Block */
+.banner
+  background-repeat: no-repeat
+  background-size: cover  
+  background-position: center center 
+  min-height: 250px
+  color: var(--clr-neutral-100)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: var(--grid-gap)
+  padding-block: 6em
+
+.btn
   background: var(--background)
+  border: solid 2px var(--text-color)
+  padding: 0.5rem 1.25rem
+  margin-inline: auto
+  color: var(--text-color)
+  text-decoration: none
+  font-size: var(--fs-400)
+  &:hover
+    background-color: var(--clr-neutral-400)
+    color: var(--clr-neutral-100)
+    border: solid 2px var(--clr-neutral-100)
+
+.btn-alt
+  background: var(--background-alt)
+  border: solid 2px var(--text-color)
+  padding: .5rem 1.25rem
+  margin-inline: auto
+  color: var(--text-color-inverse)
+  text-decoration: none
+  font-size: var(--fs-400)
+  &:hover
+    background-color: var(--clr-neutral-100)
+    border: solid 2px var(--clr-neutral-800)
+    color: var(--clr-neutral-800)
+  
+/* Exceptions */
+
+.company-name
+  &-p1
+    display: var(--display-primary)
+
+/* HEADER CONTENT */
+.site-header 
+  font-size: var(--fs-header)
+  background: var(--background)
+  font-weight: 900
   display: flex
   align-items: center
   justify-content: space-between
-  position: sticky
-  top: 0
   width: 100%
   padding: var(--mobile-margin)
   z-index: 999
-  filter: drop-shadow(0px 5px 5px var(--battleship-gray))
-  // max-height: 3em
 
   & > *
     flex-shrink: 1
 
-.mobile-name
-  font-size: 2rem
-  font-weight: 900
-  line-height: 1
-  display: var(--display-mobile)
-  @include mixins.trim-font
-  @include mixins.nothing
-
 .logo
-  &-primary
+  width: auto
+  overflow-y: clip
+  height: var(--svg-height)
+  fill: var( --svg-clr)
+  stroke: var( --svg-clr)
+  #name
     display: var(--display-primary)
-  &-mobile
-    display: var(--display-mobile)
+
+.logo-small
+  fill: var( --svg-clr)
+  stroke: var( --svg-clr)
+
+
+.mobile-header-name
+  font-family: var(--ff-display)
+  display: var(--display-mobile)
+  line-height: 1
+  @include libs.trim-font
+  @include libs.nothing
+  a
+    border-bottom: none
+
 
 nav
   background: var(--background)
@@ -97,24 +324,21 @@ nav
   transform: scale(1,0)
   transform-origin: top
   transition: transform 400ms ease-in-out
+  padding-right: var(--mobile-margin)
   
   ul
     margin: 0
     padding: 0
     list-style: none
   
-  li
-    margin-bottom: 0.5em
-    margin-right: var(--mobile-margin)
+  // li
+  //  margin-bottom: 0.5em
     
   a
-    text-decoration: none
-    text-transform: uppercase
-    opacity: 0
-    transition: opacity 150ms ease-in-out
     color: var(--text-color)
-    &:hover
-      color: var(--accent)
+    opacity: 0
+    border-bottom: none
+    transition: opacity 150ms ease-in-out
   
 .nav-toggle
   display: none
@@ -131,133 +355,83 @@ nav
     right: 0
     
     span
-      @include mixins.nav-selector
-      @include mixins.nothing
+      @include libs.nav-selector
+      @include libs.nothing
       &::before
-        @include mixins.span-selector
-        @include mixins.nothing
-        bottom: calc(var(--span-height)*2)
+        @include libs.span-selector
+        @include libs.nothing
+        bottom: calc(var(--hamburger-size)*2)
         
       &::after
-        @include mixins.span-selector
-        @include mixins.nothing
-        top: calc(var(--span-height))
+        @include libs.span-selector
+        @include libs.nothing
+        top: calc(var(--hamburger-size))
         
 
 /* MAIN CONTENT */
 
-// Components
-.banner
-  background-repeat: no-repeat
-  background-size: cover  
-  background-position: center center 
-  min-height: 250px
-  color: var(--pure-white)
-  text-align: center
-  display: flex
-  flex-direction: column
-  justify-content: center
-  gap: var(--grid-gap)
-  padding-block: 4em
-  h1, h2
-    filter: drop-shadow(2px 2px 5px black)
-    line-height: 1.2
-
-.btn
-  background: var(--background)
-  color: var(--text-color)
-  padding: 12px 26px
-  text-decoration: none
-  max-width: 175px
-  margin-inline: auto
-  border-radius: 7px
-  @include mixins.trim-font
-  @include mixins.nothing
-
-// Sections
-section
-  padding-block: 1em
-
-#hero,
-#banner2
-  background-color: var(--background-alt)
-
-.hero_content
-  background-image: url('/images/cameron-venti-_MjAjDQQgrY-unsplash.jpg')
-  background-color: rgba(0,0,0,.3)
-  background-blend-mode: multiply
-
-.company-name
-  display: var(--display-primary)
-  
-.about-us
-  background-color: var(--pure-white)
-  // min-height: 100vh
-  // display: flex
-  // flex-direction: row
-  // flex-wrap: wrap
-  // justify-content: center
-  // align-content: center
-  // gap: var(--grid-gap)
-  max-width: 60em
-  margin-inline: auto
-  padding-inline: 3em
-  columns: 30ch
-  
-  h2
-    column-span: all
-    text-align: center
-    // flex: 1 1 100%
-    // text-align: center
-  // p
-  //   flex: 1 1 20ch
-
-#services
-  background-color: var(--background-alt)
-  padding-block: var(--grid-gap)
 
 .services
-  color: var(--pure-white)
-
   display: flex
   flex-wrap: wrap
   justify-content: center
   gap: var(--grid-gap)
-  
-  max-width: 60em
   margin-inline: auto
   padding-inline: 3em
-  
-  h2
-    flex: 1 1 100%
-    text-align: center
-  
-  a
-    color: var(--pure-white)
-    
-.service 
-  width: clamp(10em,25em,100%)
-  img
-    max-height: 97px
-  .service_image
-    display: flex
-    gap: 0.5em
-    justify-content: start
-    align-content: center
-    span
-      margin-block: auto
-  
-#banner2
-  .hero_content
-    background-image: url('/images/omar-prestwich-MiJXjRxkueI-unsplash.jpg')
+  max-width: 100em
+
+.service-card
+  box-shadow: 2px 2px 5px var(--clr-neutral-800)
+  max-width: var(--card-max-width)
+  padding-bottom: 1em
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  header
+    h3
+      width: 95%
+      margin-inline: auto
+      min-height: 7.25rem
+
+.single-page
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  flex-direction: row
+  gap: 1em
+  > *
+    flex: 1 1 15em
+  .content
+    max-width: 30em
+  .service-image
+      max-width: 12em
+      height: 100%
+      margin-block: 1em
+
+.push-end
+  margin-top: 1em
 
 
 /* MEDIA */
- 
-@media screen and (min-width: 800px)
+@media screen and (min-width: libs.$breakpoint-mobile)
   :root
     --display-primary: block
     --display-mobile: none
+    --card-max-width: var(--card-size-large)
+    --svg-height: calc(var(--fs-header) * 2.4)
+  
+  .content-img
+    flex-direction: row
+    gap: 1em    
+
+    .portait
+        width: auto
+        height: 300px
+        margin-block: 1em
+        border-radius: var(--border-radius)
+  
+  .flex-reverse
+    flex-direction: row-reverse
 
   .header
     p
@@ -265,7 +439,20 @@ section
 
   nav
     all: unset
+    padding-right: var(--mobile-margin)
     a
       opacity: 1
     ul
       display: flex
+      align-content: center
+      & > * + *::before
+        content: '|'
+        margin: 0.4em
+        
+
+@media (prefers-color-scheme: dark)
+  :root
+    --svg-clr: var(--clr-neutral-100)
+    --text-color: var(--clr-neutral-100)
+    --background: var(--clr-neutral-800)
+    --background-mixed: var(--clr-neutral-400)

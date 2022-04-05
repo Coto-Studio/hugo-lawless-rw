@@ -1,0 +1,27 @@
+{{ define "background" }}
+  {{ $data := newScratch }}    
+  {{ with .Params.images }}
+    {{ range first 1 . }}
+      {{ $data.Set "url" . }}
+    {{ end }}
+  {{ end }}
+  {{ with ($data.Get "url") }}
+    {{ $banner := resources.Get . }} 
+    {{ $banner := $banner.Fill (printf "2160x1200 %s" $.Params.fill)}}
+    {{ partial "head/custom-bg" $banner.Permalink }}
+  {{ end }}
+{{ end }}
+{{ define "main" }}
+  <article id="{{ .Params.name }}" class="bg-standard" aria-labelledby="company-name">
+    {{ partial "body/hero" . }}
+    <section class="single-page padding-all-2">
+      {{ with .Params.images}}
+        {{ range after 1 . }}
+        {{ $img := resources.Get .}}
+        <img class="border-radius service-image" src="{{ $img.Permalink }}" alt="">
+        {{ end }}
+      {{ end }}
+      <div class="content">{{ .Content }}</div>
+    </section>
+  </article>
+{{ end }}

@@ -1,63 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {{ partial "head/metadata" . }}
-    {{ partial "head/css" . }}
-  </head>
-  <body>
-    <header class="header">
-      <div id="logo-container">
-        <a href="/">
-          {{ $logoMobile := resources.Get "images/lawless-logo.png" }}
-          <img class="logo-mobile" src="{{ $logoMobile.RelPermalink}}" alt="Lawless R+W Logo" height="70px" />
-          {{ $logoFull := resources.Get "images/lawless-logo-combo.png" }}
-          <img class="logo-primary" src="{{ $logoFull.RelPermalink}}" alt="Lawless R+W Logo" height="70px" />
-        </a>
-      </div>
-      <div class="mobile-name uppercase headline">Lawless</div>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <nav class="navbar">
-        <ul>
-          {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-      </nav>
-      <label for="nav-toggle" class="nav-toggle-label">
-        <span></span>
-      </label>
-    </header>
-    <main>
-      <section id="hero">
-        <div class="banner hero_content">
-          <h1><span class="uppercase company-name headline">Lawless</span> Waterproofing & Restoration</h1>
-          <a href="#contact-us" class="btn">Contact Us</a>
-        </div>
-      </section>
-      <section id="about-us">
-        <div class="about-us">
-          <h2>About Us</h2>
-          <p>At our core, we are a team of industry professionals with decades of on-the-ground and strategic management experience, allowing us to consistently deliver high-quality results.  We are passionate about delivering exceptional value for our clients and partners. Our range of skilled services include rehabilitative restoration and waterproofing, concrete preparation, water jetting, and facade maintenance.</p>
-          <p> We utilize the latest technology, equipment, and materials in the industry and streamline our services to ensure optimum results. Working with architectural consultants allows us to help our clients identify and realize the full scope of work that needs to be performed, and then offer a complete range of services to satisfy our clients’ needs.</p>
-          <p>Our integrity and our dedication to providing unrivaled value for our customers differentiates us from our competitors. We look forward to speaking with you about your specific needs and goals. <strong>Please call us at 970-302-0535.</strong></p>
-        </div>
-      </section>
-      <section id="services">
-        <div class="services">
-          <h2>Services</h2>
-          {{ range where site.RegularPages "Type" "services" }}
-            {{ partial "sections/service" . }}
-          {{ end }}
-        </div>
-      </section>
-      <section id="banner2">
-        <div class="banner hero_content">
-          <h1>We are Versatile</h1>
-          <a href="#contact-us" class="btn">Contact Us</a>
-        </div>
-      </section>
-      <section id="what-we-offer"></section>
-    </main>
-    <footer></footer>
-  </body>
-</html>
+{{ define "main" }}
+  <!-- Section: {{ .Params.name }} -->
+  <section id="{{ .Params.name }}" aria-label="Company Name">
+    {{ partial "body/hero" . }}
+  </section>
+  
+  {{ range where site.RegularPages "Type" "homepage" }}
+    {{ if (eq .Params.section_type "banner")  }}
+      {{ partial "sections/banner" . }}
+    {{ end}}
+    
+    {{ if (eq .Params.section_type "text")  }}
+      {{ partial "sections/text" . }}
+    {{ end}}
+    
+    {{ if (eq .Params.section_type "services")  }}
+      {{ partial "sections/services" . }}
+    {{ end}}
+  
+    {{ if (eq .Params.section_type "certifications")  }}
+      {{ partial "sections/certifications" . }}
+    {{ end}}
+  {{ end }}
+{{ end }}

@@ -1,5 +1,16 @@
 {{ $reset := resources.Get "css/reset.css" }}
-{{/* $style := resources.Get "scss/style.sass" | toCSS (dict "targetPath" "assets/css/style.css" "enableSourceMap" true "transpiler" "dartsass") */}}
+
+{{ $fa := resources.Get "css/fa/fontawesome.min.css"}}
+{{ $solid := resources.Get "css/fa/solid.min.css"}}
+{{ $brands := resources.Get "css/fa/brands.min.css"}}
+
 {{ $style := resources.Get "css/style.css" }}
-<link rel="stylesheet" href="{{ $reset.RelPermalink}}" />
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+{{ $unsplash := resources.Get "css/unsplash.css" | resources.ExecuteAsTemplate "vars.css" . }}
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Roboto+Slab:wght@200;300;400;500;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+{{ $main := slice $reset $fa $solid $brands $unsplash $style | resources.Concat "css/main.css" }}
+<link rel="stylesheet" href="{{ $main.RelPermalink }}" />

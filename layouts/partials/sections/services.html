@@ -1,0 +1,31 @@
+<!-- Section: Services -->
+<section id="services" class="text-neutral-100 bg-img-unsplash-6 padding-block-default" {{ with .Params.ariaLabeledBy }} aria-labelledby="{{.}}"{{ end }} {{ with .Params.ariaLabel }} aria-label="{{.}}"{{ end }}>
+  <header>
+    <h2 class="headline text-uppercase flex-100 text-align-center drop-shadow-800">Services</h2>
+  </header>
+  <div class="services col-large">
+    {{ range where site.RegularPages "Type" "services" }}
+      <article class="service-card border-radius bg-standard">
+        <header class="text-align-center" >
+          <a href="{{.Permalink}}" class="text-neutral-100">
+            {{ $data := newScratch }}    
+            {{ with .Params.images }}
+              {{ range first 1 . }}
+                {{ $data.Set "url" . }}
+              {{ end }}
+            {{ end }}
+            {{ $banner := resources.Get ($data.Get "url") }}            
+            {{ $small := $banner.Fill (printf "540x300 %s" .Params.fill) }}
+            {{ $medium := $banner.Fill (printf "1080x600 %s" .Params.fill) }}
+            {{ $large := $banner.Fill (printf "2160x1200 %s" .Params.fill) }}
+            <img src="{{$medium.Permalink}}" 
+                 srcset="{{$small.Permalink}} 540w, {{$medium.Permalink}} 1080w, {{$large.Permalink}} 2160w"
+                 alt="{{with $.Page.Params.alt}}{{.}}{{else}}{{$.Page.Title}}{{end}}">
+          </a>
+          <h3>{{ .Title | safeHTML }}</h3>
+        </header>
+        <a class="border-radius margin-auto btn-alt" href="{{.Permalink}}">Learn More</a>
+      </article>
+    {{ end }}
+  </div>
+</section>
