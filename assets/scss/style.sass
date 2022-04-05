@@ -7,12 +7,9 @@
   line-height: 1.625
   font-weight: 700
 
-input
+:is(input, textarea)
   color: var(--clr-neutral-400)
-  font-family: var(--ff-primary)
-  font-size: var(--fs-400)
-  line-height: 1.625
-  font-weight: 700
+
 
 html
   // scroll-padding-top: calc(var(--headline-size) + 4em)
@@ -44,9 +41,6 @@ a
   &:hover
     color: var(--text-color-alt)
     border-bottom: 3px solid var(--text-color-alt)
-
-svg
-  overflow-y: clip
 
 /* Composition */
 
@@ -86,7 +80,7 @@ svg
     margin-inline: auto
 
 .contact-us-logo
-  width: min(80%, 5rem)
+  width: min(80%, 6rem)
   margin-inline: auto
   padding-top: 3rem
 
@@ -301,6 +295,11 @@ svg
   stroke: var( --svg-clr)
   #name
     display: var(--display-primary)
+
+.logo-small
+  fill: var( --svg-clr)
+  stroke: var( --svg-clr)
+
 
 .mobile-header-name
   font-family: var(--ff-display)

@@ -11,7 +11,11 @@
           <li><span class="fa-li"><i class="fa-brands fa-linkedin"></i></span>{{.Site.Params.linkedin | markdownify }}</li>
         </ul>
         {{ $logo := resources.Get "images/logo/lawless.svg" }}
-        <img class="contact-us-logo"src="{{ $logo.Permalink }}" alt="Lawless RW Logo" >
+        <div class="contact-us-logo">
+          <svg viewBox="0 0 870 1000" class="logo-small">
+            <use xlink:href="#logo"/>
+          </svg>            
+        </div>
       </div>
       <form action="https://submit-form.com/dKhIvRYj" data-botpoison-public-key="pk_b04918a3-ab4c-4523-9c2b-50de5a6ed4bf" class="form bg-neutral-400 padding-all-2">
         <input type="text" id="name" name="name" placeholder="Name*" required/>
