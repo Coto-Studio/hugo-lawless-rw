@@ -14,7 +14,7 @@ It is recommended to replace the caulking and sealants on your parking garage or
 
 - Inspections and condition assessments
 - Leak and water tests
-- Sealant replacement in all facade substrates and parking garages
+- Sealant replacement in all façade substrates and parking garages
 - Curtain walls, aluminum composite panel, EIFS
 - Exterior wall expansion joints
 - Wet glazing

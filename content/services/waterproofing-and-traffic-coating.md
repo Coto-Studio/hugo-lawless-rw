@@ -9,7 +9,7 @@ images:
   - "images/services/wp1 page.jpeg"
 ---
 
-As approved applicators, we help you navigate selection of appropriate waterproofing for your building’s environment. These robust systems are designed to protect sections of your building that are exposed to harsh elements and high foot or vehicle traffic. Selecting and maintaining these systems should be done with the help of a professional waterproofing contractor. We have the experience that you are looking for.
+We value and appreciate beautiful and historic architecture and we take great pride in our trusted, tested and proven process, material selection and consultation with leading industry experts when selecting the proper solution. We frequently work with recognized architectural consultants in addition to providing our own in-house consulting.
 
 - Vehicular traffic coating installation and repair
 - Pedestrian traffic coating installation and repair
