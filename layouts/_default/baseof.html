@@ -3,6 +3,7 @@
   <head>
     {{ partial "head/metadata" . }}
     {{ partial "head/css" . }}
+    {{ partial "head/scripts" . }}
     {{ block "background" . }}
     {{ end }}
   </head>
@@ -15,6 +16,5 @@
     </main>
     
     {{ partial "body/footer" . }}
-    {{ partial "body/scripts" . }}
   </body>
 </html>
