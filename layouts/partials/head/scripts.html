@@ -1,11 +1,10 @@
 {{ $logo := resources.Get "js/logo.js" }}
 {{ $menu := resources.Get "js/menu.js" }}
 {{ $botpoison := resources.Get "js/botpoison.js" }}
-
 {{ $js := slice $logo $menu $botpoison | resources.Concat "assets/js/bundle.js" }}
 
 <!-- Botpoison Browser Script -->
 <script src="https://unpkg.com/@botpoison/browser" async></script>
 
 <!-- Scripts -->
-<script type="application/javascript" src='{{ $js.RelPermalink }}'></script>
+<script type="application/javascript" src='{{ $js.RelPermalink }}' defer></script>
