@@ -1,3 +1,5 @@
 .DS_Store
 .nova/
 /resources
+public/
+docker-stack-op.yaml
