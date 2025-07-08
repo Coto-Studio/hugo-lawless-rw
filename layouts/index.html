@@ -5,6 +5,7 @@
   </section>
   
   {{ range where site.RegularPages "Type" "homepage" }}
+  
     {{ if (eq .Params.section_type "banner")  }}
       {{ partial "sections/banner" . }}
     {{ end}}
